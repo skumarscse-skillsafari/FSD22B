@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="ID - Class Selector - 2">
+    <title>ID - Class Selector - 2</title>
+    <style>
+        h1.color-red {
+            color: red;
+        }
+
+        /* Works only, if id and class are siblings */
+        #color-red.align-center {
+            color: red;
+            text-align: center;
+        }
+
+        /* Not works, if id and class are in parent-child relation */
+        #color-blue.text-underline {
+            color: blue;
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="color-red">ID - Class Selector - 2</h1>
+    <p class="color-red">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, et ullam earum consequuntur distinctio dolore sint sed nisi quos nemo minima ex illo praesentium enim sit veniam quia, quis ratione!
+    </p>
+
+    <hr>
+
+    <h1 id="color-red" class="align-center">Another Heading</h1>
+    <div id="color-blue">
+        <p class="text-underline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam consequuntur possimus, sit atque libero incidunt quos ullam dolores quia optio quaerat odio sint voluptas nihil sunt ab perspiciatis, rerum molestiae!</p>
+    </div>
+</body>
+</html>

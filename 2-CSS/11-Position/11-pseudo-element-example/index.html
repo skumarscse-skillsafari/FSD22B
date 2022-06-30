@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Pseudo element example">
+    <title>CSS - Pseudo element example</title>
+    <style>
+        div {
+            width: 70vw;
+            margin: 100px auto;
+            /* border: 2px solid green; */
+            /* height: 50vh; */
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        div::before {
+            content: '';
+            border: 2px solid grey;
+            width: 100%;
+            height: 100%;
+            top: -40px;
+            left: -40px;
+            position: absolute;
+            box-sizing: border-box;
+            z-index: -5;
+            transition: all 0.5s liner;
+        }
+
+        div::after {
+            content: '';
+            background: rgba(128, 128, 128, 0.5);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            box-sizing: border-box;
+            top: -20px;
+            left: -20px;
+            z-index: -1;
+            transition: all 0.5s linear;
+        }
+
+        div:hover::after, div:hover::before {
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="./image-4.jpg" alt="This is a flower image">
+    </div>
+</body>
+</html>

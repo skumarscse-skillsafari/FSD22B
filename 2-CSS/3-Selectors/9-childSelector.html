@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Child Selector Combinator">
+    <title>Child Selector Combinator</title>
+    <style>
+        /* 
+        parentElementTagName > childElementTagName {
+            propertyName: propertyValue;
+        }
+        */
+
+       .list > li {
+           color: red;
+           list-style: decimal;
+       } 
+
+       #div-container p {
+           color: green;
+       }
+    </style>
+</head>
+<body>
+    <h1>Child Selector Combinator</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis culpa dicta, praesentium saepe nemo, exercitationem deleniti, eaque consequuntur iure numquam voluptates illo consequatur excepturi? Ea porro ab impedit temporibus iste?</p>
+    <hr>
+    <a href="#">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque autem omnis adipisci illum unde veniam debitis id! Modi odio soluta deserunt consequatur inventore, nam eveniet corrupti blanditiis maxime repellat. Unde.</p>
+    </a>
+    <div id="div-container">
+        <h2>Hello</h2>
+        <p>Paragraph</p>
+    </div>
+    <div>
+        <h2>Hello World</h2>
+        <p>This is another paragraph</p>
+    </div>
+    <hr>
+    <ul class="list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Profile</li>
+        <li>Contact</li>
+    </ul>
+
+</body>
+</html>

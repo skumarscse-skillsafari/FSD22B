@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Z-Index">
+    <title>CSS - Z-Index</title>
+    <style>
+        /* 
+        z-index - used to allign our elements/images in z-index
+        default - 0
+        works only on position relative and absolute, not on static
+        */
+        img {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+        }
+
+        .banner {
+            margin: 20px;
+            width: 80vw;
+            height: 70vh;
+            border: 5px solid green;
+            position: relative;
+        }
+
+        .one {
+            top: 0;
+            left: 0;
+            z-index: -3;
+        }
+
+        .two {
+            top: 10%;
+            left: 10%;
+            z-index: 2;
+        }
+
+        .three {
+            top: 20%;
+            left: 20%;
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <img src="./images/image-1.jpg" alt="flower image" class="one">
+        <img src="./images/image-2.jpg" alt="flower image-2" class="two">
+        <img src="./images/image-4.jpg" alt="flower image-3" class="three">
+    </div>
+</body>
+</html>

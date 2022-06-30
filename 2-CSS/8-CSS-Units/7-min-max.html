@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Min and Max Height">
+    <title>Min and Max Height</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .navbar {
+            background: blue;
+            height: 6rem;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .banner {
+            background: red;
+            /* height: calc(100vh - 6rem); */
+            min-height: calc(100vh - 6rem);
+            max-height: 90vh;
+            overflow: hidden;
+            overflow: scroll;
+        }
+        
+        .example {
+            background: green;
+            width: 10rem;
+            height: 25rem;
+            overflow: scroll;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li>simple link</li>
+    </ul>
+    <div class="banner">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati sed aliquam saepe sint, autem consequuntur, iusto veritatis aliquid voluptatem commodi ad molestiae harum. Est repudiandae, provident veniam voluptatibus recusandae facilis laboriosam, magni tempora voluptatem debitis voluptas autem! Velit commodi sint accusantium, id, quam accusamus assumenda itaque minus, a quia tenetur quidem exercitationem! Nulla placeat quia ipsum quae omnis expedita alias eaque praesentium maiores sint saepe nemo obcaecati non similique error, enim incidunt quam dicta excepturi debitis, facilis veritatis iure repudiandae? Illo expedita, praesentium maxime architecto vero temporibus ducimus molestias suscipit possimus, animi incidunt? Vero vitae soluta distinctio cum minus voluptatibus?
+    </div>
+    <div class="example">
+        <p>Hello world</p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, fugiat rerum neque vel maxime nobis dolor autem asperiores nemo sunt consequuntur doloremque voluptatibus laudantium expedita assumenda nulla obcaecati sit, qui porro placeat voluptate consequatur! Nam unde sint esse repellat corporis tenetur amet nesciunt, vero, similique modi a magnam doloribus ducimus. Suscipit libero reprehenderit impedit iusto illum iste molestiae optio quidem id, ipsa ipsam unde officiis est magnam laudantium quis, non minima cupiditate soluta natus incidunt perferendis. Rem illo totam itaque maxime optio, vel dicta, molestiae reprehenderit magnam cupiditate laborum? Cupiditate harum, maxime nostrum eos officia incidunt recusandae aliquam autem culpa.
+        <p>Hello world</p>
+    </div>
+</body>
+</html>

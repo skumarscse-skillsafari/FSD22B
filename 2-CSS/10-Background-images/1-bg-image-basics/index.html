@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Background images">
+    <title>CSS - Background images</title>
+    <style>
+        div {
+            height: 300px;
+            color: white;
+            border: 2px solid green;
+        }
+        .big-img {
+            background: url('./images/image-2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .small-img {
+            /* height: 900px; */
+            background: url('./images/image-6.jpg');
+            /* background-repeat: repeat; */
+            /* background-repeat: repeat-x; repeat the image horizontally */
+            /* background-repeat: repeat-y; */
+            /* background-repeat: space; */
+            /* background-repeat: round; */
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            /* background-size: contain; */
+            background-position: center;
+            background-position: 0% 0%;
+        }
+        .some-img {
+            background: url('./images/image-4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="big-img">
+        <h1>Big Image</h1>
+    </div>
+    <div class="small-img">
+        <h1>Small Image</h1>
+    </div>
+    <div class="some-img">
+        <h1>Some Image</h1>
+    </div>
+</body>
+</html>

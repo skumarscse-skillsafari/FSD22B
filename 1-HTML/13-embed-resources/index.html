@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Embed resources">
+    <title>Embed Resources</title>
+</head>
+<body>
+    <!-- 
+        How to include image, audio, video
+        1. Image
+            <img src="path_of_an_image" alt="some_description_about_image" height="200px" width="150px"/>
+     -->
+     <h1>Embed Resources</h1>
+     <hr>
+     <h3>Embedding Image</h3>
+     <!-- 
+         <img src="path_of_an_image" alt="some_description_about_image" height="200px" width="150px"/>
+      -->
+      <img src="./images/image-1.jpg" alt="This is first image" height="150px" width="150px">
+      
+      <img src="./images/image-2.jpg" alt="This is second image" height="150px" width="150px">
+      
+      <img src="./images/image-3.jpg" alt="This is third image" height="150px" width="150px">
+      <hr>
+      <h3>Embedding Audio</h3>
+      <!-- 
+          <audio controls autoplay>
+              <source src="path_of_audio" />
+          </audio>
+       -->
+       <!-- <audio src="./audio/titanic.mp3" type="audio/mp3" controls></audio> -->
+       <audio controls>
+           <source src="./audio/titanic.mp3" type="audio/mp3">
+       </audio>
+       <h3>Embedding Video</h3>
+       <!-- 
+           <video controls autoplay>
+               <source src="path_of_the_video" heigth="250px" width="250px"/>
+           </video>
+        -->
+        <video height="250px" width="250px" controls>
+            <source src="./video/amazon-go.mp4" type="video/mp4">
+        </video>
+
+</body>
+</html>

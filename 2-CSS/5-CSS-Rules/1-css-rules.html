@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Rules">
+    <title>CSS Rules</title>
+    <style>
+        h1#color-red {
+            color: red!important;
+        }
+
+        h1.color-blue {
+            color: blue;
+        }
+        /* 
+        1. Among inline, internal and external css declaration, inline has more preference than other two
+        2. Among id and class, id has more preference than class
+        3. important '!'
+        */
+    </style>
+</head>
+<body>
+    <h1>CSS Rules</h1>
+    <h1 style="color: green;" id="color-red" class="color-blue">Heading</h1>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Pseudo Element">
+    <title>Pseudo Element</title>
+    <style>
+        /* 
+        selector::pseudoElement {
+            propertyName: propertyValue
+        }
+        */
+        h1::after {
+            content: "!!!";
+        }
+
+        p::first-letter {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo Element</h1>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+
+    <p>
+        <a href="#">Lorem ipsum dolor sit amet consectetur, </a>adipisicing elit. Sint ipsum vero in unde libero, praesentium et, possimus maxime veritatis, rem quod. Ducimus sint sunt dolore fugiat debitis illo molestiae voluptate!
+    </p>
+</body>
+</html>

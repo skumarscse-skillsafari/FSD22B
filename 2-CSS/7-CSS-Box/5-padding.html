@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Padding Property">
+    <title>CSS Padding Property</title>
+    <style>
+        /* 
+        Margin: Add space outside the element
+        Padding: Add space inside the element
+
+        Element: content + padding + border + margin => (183 x 38) + (20 x 20) + (5 x 5) + (50 x 50)
+        */
+        p {
+            border-width: 5px;
+            border-radius: 5px;
+        }
+
+        p.green-dotted-border {
+            margin: 50px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Padding Property</h2>
+    <p class="red-dashed-border" style="border-color: red; border-style: dashed;">This is red dashed bordered paragraph</p>
+    <p class="green-dotted-border" style="border-color: green; border-style: dotted;">This is green-dotted-bordered paragraph</p>
+    <p class="blue-solid-border" style="border-color: blue; border-style: solid;">This is red dashed bordered paragraph</p>
+</body>
+</html>

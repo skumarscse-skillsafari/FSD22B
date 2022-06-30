@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Flexbox - flex-basis" />
+    <title>CSS - Flexbox - flex-basis</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .container {
+        border: 5px solid red;
+        display: flex; /* flex-direction: row, flex-wrap: nowrap, justify-content: flex-start and align-items: stretch*/
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .box {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #f3f3f3;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 250px;
+      }
+
+      .box-1 {
+        background: #581f18;
+      }
+
+      .box-2 {
+        background: #f0a202;
+        /* flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 300px; */
+      }
+
+      .box-3 {
+        background: #d95d39;
+      }
+
+      .box-4 {
+        background: #202c59;
+      }
+
+      .box-5 {
+        background: #51cb20;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- parent -->
+    <div class="container">
+      <!-- child -->
+      <div class="box box-1">One</div>
+      <div class="box box-2">Two</div>
+      <div class="box box-3">Three</div>
+      <div class="box box-4">Four</div>
+      <!-- <div class="box box-5">Five</div> -->
+    </div>
+  </body>
+</html>

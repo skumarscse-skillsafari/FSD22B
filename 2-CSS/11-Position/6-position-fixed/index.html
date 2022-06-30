@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Position - Fixed">
+    <title>Position - Fixed</title>
+    <style>
+        /* 
+        position: absolute - relative to the parent with position:relative
+        position: fixed - relative to viewport (screen), as we are scrolling
+        will use other content to fill out the space
+        */
+        .nav {
+            background: red;
+            color: white;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-top: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        div {
+            border: 3px solid red;
+            background: yellow;
+            margin-top: 40px;
+        }
+
+        .container {
+            min-height: 100vh;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        navbar
+    </div>
+    <div>
+        <p class="one">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem officiis, non aliquid laborum numquam quisquam repellat. Delectus similique ullam eum!</p>
+        <p class="two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem perferendis sapiente eaque hic repellendus commodi voluptate, architecto maiores beatae reprehenderit?</p>
+    </div>
+    <div class="container"></div>
+</body>
+</html>

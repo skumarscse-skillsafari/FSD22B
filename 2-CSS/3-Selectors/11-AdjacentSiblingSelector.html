@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Adjacent Sibling Selector - Combinator">
+    <title>Adjacent Sibling Selector - Combinator</title>
+    <style>
+        /* 
+        selector1 + selector2 {
+            propertyName: propertyValue;
+        }
+        Selectors are separed with '+' to indicate the rule is applied one after another
+        Selector should be immediate adjacent sibling (top-bottom)
+        */
+        /* Apply the css property to first <a> adjacent to <p> */
+        p + a {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adjacent Sibling Selector Combinator</h1>
+    <p>
+        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo nesciunt eos, fuga autem quibusdam optio, beatae quisquam aut eum earum illum. Facilis quam at aut beatae, nemo magni autem?</a>
+    </p>
+    <a href="#">This is an anchor element</a>
+    <hr>
+    <a href="#">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam ut sunt in quaerat numquam itaque et quis similique exercitationem corrupti hic, ullam quia ipsum, esse fugit, sapiente provident iusto suscipit.</p>
+    </a>
+    <hr>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptas voluptatibus distinctio numquam eius, recusandae dolorem totam enim atque quis, ex magni! Tenetur laboriosam nulla error omnis nobis saepe corrupti.
+        </p>
+    </div>
+    <hr>
+    <div>
+        <a href="#">This is present inside div container</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem similique velit hic, veniam dignissimos at ab illo repellendus laboriosam aliquid sit a vitae minima ipsam aspernatur quis in facere culpa?</p>
+    </div>
+</body>
+</html>

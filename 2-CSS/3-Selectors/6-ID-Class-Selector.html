@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="ID - Class Selector">
+    <title>ID - Class Selector</title>
+    <style>
+        /* 
+        1. ID has more preference than class (if you are using same properties in both id and class)
+        */
+        #green-border {
+            border-style: double;
+            border-color: green;
+        }
+
+        .red-border {
+            border-style: double;
+            border-color: red;
+            border-radius: 25px;
+        }
+
+        .text-italics {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="green-border" class="red-border text-italics">ID - Class Selector</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eveniet reiciendis? Consequatur voluptate doloribus, quas tempore velit temporibus repellat fuga! Possimus fugit a pariatur, eaque ipsam sint quisquam ullam voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, minima minus esse pariatur reprehenderit ipsa molestias eaque quia nesciunt tenetur, quasi dignissimos id vel, ipsam hic consectetur eveniet eos impedit!</p>
+</body>
+</html>

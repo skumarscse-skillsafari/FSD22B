@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Transition Timing functions">
+    <title>CSS - Transition Timing functions</title>
+    <style>
+        /* 
+        transition timing function we can add with transition shorthand property
+        transition: property duration transition-function delay
+        ease - default / slow start, fast, slow end
+        linear - same speed from start to end
+        ease-in - slow start
+        ease-out - slow end
+        ease-in-out - slow start, fast, slow end
+        */
+        div {
+            width: 150px;
+            height: 150px;
+            background: green;
+            font-size: 24px;
+            color: white;
+            margin: 5px;
+            transition: all 2s;
+        }
+
+        div:hover {
+            transform: translateX(100px);
+        }
+        .ease {
+            transition-timing-function: ease;
+        }
+        .linear {
+            transition-timing-function: linear;
+        }
+        .ease-in {
+            transition-timing-function: ease-in;
+        }
+        .ease-out {
+            transition-timing-function: ease-out;
+        }
+        .ease-in-out {
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="default">Default</div>
+    <div class="ease">Ease</div>
+    <div class="linear">Linear</div>
+    <div class="ease-in">Ease-In</div>
+    <div class="ease-out">Ease-Out</div>
+    <div class="ease-in-out">Ease-In-Out</div>
+</body>
+</html>

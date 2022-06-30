@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS Units: calc()">
+    <title>CSS Units: calc()</title>
+    <style>
+        /* 
+         calc() - Used to perform math operations, mix and match values
+        */
+        * {
+            margin: 0;
+        }
+
+        .navbar {
+            background: blue;
+            height: 10vh;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .banner {
+            background: red;
+            height: calc(100vh - 10vh); /* 90vh */
+        }
+    </style>
+</head>
+<body>
+    <ul class="navbar">
+        <li>simple link</li>
+    </ul>
+    <div class="banner"></div>
+</body>
+</html>

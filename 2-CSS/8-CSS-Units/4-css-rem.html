@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Desccription" content="CSS Units: rem">
+    <title>CSS Units: rem</title>
+    <style>
+        /* 
+            rem - Relative, depends on root
+            1rem = 1 * base value of root
+        */
+
+        html {
+            font-size: 10px;
+        }
+
+        div {
+            font-size: 5px;
+        }
+
+        .absolute {
+            font-size: 20px;
+        }
+
+        .relative {
+            font-size: 2rem; /* 2 * 10px => 20px */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Units: rem</h1>
+    <div>
+        <h3 class="relative">This is relative text</h3>
+    </div>
+    <div>
+        <h3 class="absolute">This is absolute text</h3>
+    </div>
+</body>
+</html>

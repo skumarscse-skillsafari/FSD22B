@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Class Selector">
+    <title>Class Selector</title>
+    <style>
+        /* 
+         .className {
+            propertyName: propertyValue;
+         }
+        */
+
+        .green-border {
+            border-style: solid;
+            border-color: green;
+        }
+
+        .red-border {
+            border-style: solid;
+            border-color: red;
+        }
+
+        /* Specifies the combination of 'p' and 'text-italics' only get this css property */
+        p.text-italics {
+            font-style: italic;
+        }
+
+        /* Specificity 
+        tagName.className {
+            propertName: propertyValue;
+        }
+        */
+
+        /* .demo {
+            border-style: dashed;
+            border-color: coral;
+        } */
+    </style>
+</head>
+<body>
+    <h1 class="green-border text-italics">Class Selector</h1>
+    <p class="red-border text-italics">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, eveniet reiciendis? Consequatur voluptate doloribus, quas tempore velit temporibus repellat fuga! Possimus fugit a pariatur, eaque ipsam sint quisquam ullam voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, minima minus esse pariatur reprehenderit ipsa molestias eaque quia nesciunt tenetur, quasi dignissimos id vel, ipsam hic consectetur eveniet eos impedit!</p>
+    <!-- <span class="demo">Demo</span> -->
+</body>
+</html>

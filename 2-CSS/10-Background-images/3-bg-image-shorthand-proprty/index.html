@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - Background image shorthand property">
+    <title>CSS - Background image shorthand property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div {
+            min-height: 100vh;
+            border: 2px solid red;
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .big-img {
+            /* background: url('./images/image-1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+
+            background: url('./images/image-1.jpg') center/cover no-repeat fixed;
+        }
+
+        .small-img {
+            /* background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(255, 100, 239, 0.44)), url('./images/image-2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(255, 100, 239, 0.44)), url('./images/image-2.jpg') center/cover no-repeat fixed;
+        }
+
+        .some-img {
+            /* background: url('./images/image-4.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+
+            background: url('./images/image-4.jpg') center/cover no-repeat fixed;
+        }
+    </style>
+</head>
+<body>
+    <div class="big-img">
+        <h1>Big Image</h1>
+    </div>
+    <div class="small-img">
+        <h1>Small Image</h1>
+    </div>
+    <div class="some-img">
+        <h1>Some Image</h1>
+    </div>
+</body>
+</html>

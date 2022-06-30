@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <div>
+          <h4>Input Elements</h4>
+          <div>
+            <label>Text</label>
+            <input name="text" type="text" placeholder="enter text here" />
+          </div>
+          <div>
+            <label>Email</label>
+            <input name="email" type="email" />
+          </div>
+          <div>
+            <label>Number</label>
+            <input name="number" type="number" max="10" min="1"/>
+          </div>
+          <div>
+            <label>Date</label>
+            <input name="date" type="date" />
+          </div>
+        </div>
+        <div>
+          <h4>Select Elements</h4>
+          <div>
+            <label>Radio</label>
+            <input name="radio" type="radio" value="yes" /> yes
+            <input name="radio" type="radio" value="no" />Whatever
+          </div>
+          <div>
+            <label>Checkbox</label>
+            <input name="checkbox" type="checkbox" value="yes" /> yes
+            <input name="checkbox" type="checkbox" value="no" />no
+          </div>
+          <div>
+            <label>Select</label>
+            <select name="select[]" multiple>
+              <option value="selection_1">selection 1</option>
+              <option value="selection_2">selection 2</option>
+              <option value="selection_3">selection 3</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <h4>Long Input Element</h4>
+          <textarea name="textarea" col="5" rows="6">If you really need to input super long text.</textarea>
+        </div>
+        <div>
+            <h4>Action Element</h4>
+          <button type="submit">Save</button>
+          <button type="button">Cancel</button>
+        </div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="CSS - MediaQueries">
+    <title>CSS - MediaQueries</title>
+    <style>
+        /* 
+        MediaQueries is used to create Responsive web application / responsive design
+        We can able to define different css styles in different screen sizes
+        min-width: --- starting from
+        max-width: --- up to
+        */
+        body {
+            background: yellow;
+        }
+
+        .banner {
+            background: blue;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        @media screen and (min-width: 576px) {
+            body {
+                background: red;
+            }
+            .banner {
+                background: yellow;
+            }
+            h1 {
+                color: brown;
+                font-size: 60px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background: pink;
+            }
+            .banner {
+                background: coral;
+            }
+            h1 {
+                color: red;
+                font-size: 60px;
+                text-decoration: line-through;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>This is heading.</h1>
+    </div>
+</body>
+</html>

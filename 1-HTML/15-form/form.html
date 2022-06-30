@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="HTML Form Elements">
+    <title>HTML Form Elements</title>
+</head>
+<body>
+    <h1>HTML FORM</h1>
+    <!-- 
+        <form>....</form>
+        <fieldset>...</fieldset>
+        <legend>...</legend>
+        <label>...</label>
+        <input type='text/email/password/radio/checkbox/number/button' />
+        <select>
+            <option>...</option>
+            <option>...>/option>
+        </select>
+     -->
+     <form action="#">
+         <fieldset>
+             <legend>Input Box Elements</legend>
+            <p>
+             <label for="firstName">First Name:</label>
+             <input type="text" name="firstName" placeholder="Enter First Name">
+            </p>
+            <p>
+             <label for="number">Number:</label>
+             <input type="number" name="number" placeholder="Enter some number">
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="Enter email">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Enter password">
+            </p>
+            <p>
+                <label for="contactNumber">Contact Number:</label>
+                <input type="tel" name="contactNumber" placeholder="Enter contact number">
+            </p>
+            <p>
+                <label for="search">Search:</label>
+                <input type="search" name="search" placeholder="Search...">
+            </p>
+            <p>
+                <label for="date">Date:</label>
+                <input type="date" name="date">
+            </p>
+         </fieldset>
+         <fieldset>
+             <legend>Select Form Element</legend>
+             <p>
+                 <label for="select">Select (Single Option):</label>
+                 <select name="select">
+                    <option value="English">English</option>
+                    <option value="Maths">Maths</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                 </select>
+             </p>
+             <p>
+                 <label for="selectMultiple">Select (Multiple Option)</label>
+                 <select name="selectMultiple" multiple>
+                    <option value="English">English</option>
+                    <option value="Maths">Maths</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                 </select>
+             </p>
+         </fieldset>
+         <fieldset>
+             <legend>Radio Button</legend>
+             <p>Select any one Engineering Subject:</p>
+             <p>
+                 <label for="radio_option_1">CSE</label>
+                 <input type="radio" name="EngOptions">
+             </p>
+             <p>
+                <label for="radio_option_2">ECE</label>
+                <input type="radio" name="EngOptions">
+            </p>
+            <p>
+                <label for="radio_option_3">EEE</label>
+                <input type="radio" name="EngOptions">
+            </p>
+            <p>Select any one Arts Subject:</p>
+            <p>
+                <label for="radio_option_1">B.Sc.,</label>
+                <input type="radio" name="ArtsOptions">
+            </p>
+            <p>
+               <label for="radio_option_2">M.Sc.,</label>
+               <input type="radio" name="ArtsOptions">
+           </p>
+           <p>
+               <label for="radio_option_3">B.Com.,</label>
+               <input type="radio" name="ArtsOptions">
+           </p>
+         </fieldset>
+         <fieldset>
+             <legend>CheckBox</legend>
+             <p>Select your favourite Engineering Subject(s):</p>
+             <p>
+                 <label for="checkbox_option_1">CSE</label>
+                 <input type="checkbox" name="EngOptions_1">
+             </p>
+             <p>
+                <label for="checkbox_option_2">ECE</label>
+                <input type="checkbox" name="EngOptions_2">
+            </p>
+            <p>
+                <label for="checkbox_option_3">EEE</label>
+                <input type="checkbox" name="EngOptions_3">
+            </p>
+            <p>Select your favourite Arts Subject(s):</p>
+            <p>
+                <label for="checkbox_option_1">B.Sc.,</label>
+                <input type="checkbox" name="ArtsOptions_1">
+            </p>
+            <p>
+               <label for="checkbox_option_2">M.Sc.,</label>
+               <input type="checkbox" name="ArtsOptions_2">
+           </p>
+           <p>
+               <label for="checkbox_option_3">B.Com.,</label>
+               <input type="checkbox" name="ArtsOptions_3">
+           </p>
+         </fieldset>
+         <fieldset>
+             <legend>Text Area:</legend>
+             <p>
+                 <label for="textArea">Text Area:</label><br>
+                 <textarea name="textArea" cols="50" rows="5" placeholder="Text Area..."></textarea>
+             </p>
+         </fieldset>
+         <fieldset>
+             <legend>File Upload:</legend>
+             <p>
+                 <label for="fileUpload">Upolad your file here:</label>
+                 <input type="file" name="fileUpload">
+             </p>
+         </fieldset>
+         <p>
+             <input type="button" value="Submit" disabled>
+             <input type="reset" value="Clear">
+             <button disabled>Submit</button>
+             <button>Clear</button>
+         </p>
+     </form>
+</body>
+</html>

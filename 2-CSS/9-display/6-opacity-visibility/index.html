@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Display: Opacity and Visibility">
+    <title>Display: Opacity and Visibility</title>
+    <style>
+        /* 
+            display: none // remove the element and collapse the next element
+            opacity: 0-1 Ex: 0.1, 0.2, ..., 1 
+            visibility: hidden // hide the element
+        */
+        div {
+            background: #f15025;
+            margin: 10px;
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        .none {
+            display: none;
+        }
+
+        .opacity-1 {
+            opacity: 1;
+        }
+
+        .opacity-5 {
+            opacity: 0.25;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .visibility {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="none">None</div>
+    <div class="opacity-1">Opacity 1</div>
+    <div class="opacity-5">Opacity 0.5</div>
+    <div class="opacity-0">Opacity 0</div>
+    <div class="visibility">Visibility</div>
+</body>
+</html>

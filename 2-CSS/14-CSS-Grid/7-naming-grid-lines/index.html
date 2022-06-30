@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Grid - naming-grid-lines" />
+    <title>CSS - Grid - naming-grid-lines</title>
+    <style>
+      /* Grid: Used to control the child elements in both x-axis and y-axis */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        color: #222;
+      }
+
+      .container {
+        margin: 10px;
+        height: 100vh;
+        border: 5px solid red;
+        display: grid;
+        grid-template-columns: [start] 100px [col-1-end] 100px [col-2-end] 100px [end];
+        grid-template-rows: [start] 100px [row-1-end] 100px [end];
+        column-gap: 50px;
+        row-gap: 50px;
+        gap: 100px 25px; /* row column */
+        gap: 10px;
+        /* overflow: scroll; */
+      }
+
+      .cell {
+        padding: 2rem;
+        background: #dedede;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        border: 3px solid green;
+        color: black;
+      }
+
+      .cell-1 {
+        grid-column: start / end;
+        grid-row: start / end;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parent -->
+    <div class="container">
+      <!-- Child -->
+      <div class="cell cell-1">One</div>
+      <div class="cell cell-2">Two</div>
+      <div class="cell cell-3">Three</div>
+      <div class="cell cell-4">Four</div>
+      <div class="cell cell-5">Five</div>
+      <!-- <div class="cell cell-6">Six</div>
+      <div class="cell cell-7">Seven</div>
+      <div class="cell cell-8">Eight</div>
+      <div class="cell cell-9">Nine</div>
+      <div class="cell cell-10">Ten</div> -->
+    </div>
+  </body>
+</html>
