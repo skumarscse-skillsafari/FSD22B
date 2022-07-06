@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Numbers" />
+    <title>JavaScript - Numbers</title>
+    <script>
+      // Numbers - whole number, decimal
+      // 12, 12.3
+      let number = 12;
+      let number2 = 12.3;
+      console.log(number); // 12
+      console.log(number2); // 12.3
+      console.log(number + number2); // 24.3 (Number)
+
+      // Numeric string => single or double quote
+      // Ex: 5 // Number
+      // Ex: "5" // String
+      // Ex: "5abc" // String
+      let number3 = "25";
+      let number4 = "20";
+      console.log(number3 + number4); //2520 (String)
+
+      console.log(number + number3); // 1225 (String)
+
+      console.log(number + number2 + number3); // 12 + 12.3 + "25" => 24.325 (String)
+      console.log(number3 + number + number2); // "25" + 12 + 12.3 => 251212.3 (String)
+
+      // Arithmetic operation => addition (+), subtraction (-), multiplication (*), division (/), modulo operation (%)
+      let numberOne = 25;
+      let numberTwo = 12;
+
+      console.log(
+        "The addition of " + numberOne + " and " + numberTwo + " is:",
+        numberOne + numberTwo
+      );
+      console.log(
+        "The subtraction of " + numberOne + " and " + numberTwo + " is:",
+        numberOne - numberTwo
+      );
+      console.log(
+        "The multiplication of " + numberOne + " and " + numberTwo + " is:",
+        numberOne * numberTwo
+      );
+      console.log(
+        "The division of " + numberOne + " and " + numberTwo + " is:",
+        numberOne / numberTwo
+      );
+      console.log(
+        "The modulo of " + numberOne + " and " + numberTwo + " is:",
+        numberOne % numberTwo
+      );
+
+      // Increment (++), Decrement (--)
+      // Post and Pre
+      // Post => First, the value is printed, then the inc/dec operation is performed
+      // Pre => First, the inc/dec operation is performed, then the value is printed
+      let number5 = 20;
+      console.log(++number5); // 21 // Pre-Increment => number5 = number5 + 1 (Increment the given value by 1)
+      console.log(--number5); // 20 // Pre-Decrement => number5 = number5 - 1 (Decrement the given value by 1)
+
+      console.log(number5++); // 20 // Post-Increment => number5 = number5 + 1 // 21
+      console.log(--number5); // 20
+
+      // Short-hand notation (Aritmetic operation => +=, -=, *=, /=)
+      let number6 = 10;
+      // number6 = number6 + 10; // number6 += 10
+      console.log((number6 += 10)); // number6 = 10 // number6 = number6 + 10 => 10 + 10 => 20
+      console.log((number6 -= 10)); // number6 = 20 // number6 = number6 - 10 => 20 - 10 => 10
+      console.log((number6 *= 10)); // number6 = 10 // number6 = number6 * 10 => 10 * 10 => 100
+      console.log((number6 /= 10)); // number6 = 100 // number6 = number6 / 10 => 100 / 10 => 10
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Numbers</h2>
+  </body>
+</html>
