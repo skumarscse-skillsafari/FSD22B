@@ -8,7 +8,7 @@
     <title>JavaScript - DataTypes</title>
     <script>
       // DataTypes - Primitive (One variable - One value) and Non-Primitive (One variable - Multiple Values)
-      // Primitive - String, Number, Boolean, Null, Undefined, NaN
+      // Primitive - String, Number, Boolean, Null, Undefined, BigInt
       // Non-Primitive - Object and Symbol
       // Primitive
       // String => Alphabetic letters / Enclosed by single or double quote
@@ -34,7 +34,8 @@
 
       // object
       let user = {
-        // key : value pair
+        // key : value pair => properties
+        // propertyName: propertyValue => property
         firstName: "SkillSafari",
         lastName: "EduKeys",
         pincode: 500004,
@@ -44,6 +45,32 @@
       console.log(user);
       document.write(user);
       //   alert(user);
+      // Accessing the object properties by '.' (dot) operator
+      // Syntax
+      // objectName.propertyName
+      // user.firstaName => SkillSafari
+      // user.lastName => EduKeys
+      // user.pincode => 500004
+      // user.isAdmin => true
+      // user.address => null
+      console.log(user.firstName);
+      console.log(user.lastName);
+      console.log(user.pincode);
+      console.log(user.isAdmin);
+      console.log(user.address);
+
+      // Access the properties of an object by using '[]' (square-bracket) method
+      // Syntax
+      // objectName["propertyName"]
+      console.log(user["firstName"]); // SkillSafari
+
+      // typeof => check the type of data which we are using
+      console.log(typeof firstName); // string
+      console.log(typeof number1); // number
+      console.log(typeof isAdmin); // boolean
+      console.log(typeof lastName); // object
+      console.log(typeof pincode); // undefined
+      console.log(typeof user); // object
     </script>
   </head>
   <body>
