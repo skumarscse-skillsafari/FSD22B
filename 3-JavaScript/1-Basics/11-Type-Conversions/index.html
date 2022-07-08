@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Type Conversions" />
+    <title>JavaScript - Type Conversions</title>
+    <script>
+      // Type Conversion
+      // prompt() => auto convert into 'String'
+      //   let response = prompt("Enter something");
+      //   console.log(response);
+
+      // String Conversion
+      // String(otherDatatypeValue)
+      //   let isAdmin = true;
+      //   console.log(isAdmin);
+      //   isAdmin = String(isAdmin);
+      //   console.log(typeof isAdmin); // number, null, true, false
+
+      // Numeric Conversion
+      // Number()
+      // Some of the numeric conversion can be happen automatically using mathematical function and expression
+      let result = "20" / "2";
+      console.log(result); // 3
+
+      // "+" => string to number
+      let value1 = "20";
+      let value2 = "30";
+      console.log(+value1 + +value2); // 50
+      console.log(Number(value1) + Number(value2)); // 50
+
+      let number = "50";
+      number = Number(number);
+      console.log(typeof number); // number
+      // undefined => NaN
+      // null => 0
+      // true and false => 1 and 0
+      // string => remove the whitespace from start and end. If the remaining string is empty, result is 0
+      // else, the number is read from the string. An error occurs it gives NaN
+
+      // console.log(Number("          hello123        "));
+
+      // Boolean Conversion
+      let value = 1;
+      value = Boolean(NaN);
+      console.log(value);
+      // null, undefined, NaN, empty string, 0 => false
+      // All other => true
+      console.log(Boolean("0")); // true
+      console.log(Boolean(" ")); // true
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Type Conversions</h2>
+    <ol>
+      <li>String</li>
+      <li>BigInt</li>
+      <li>Number</li>
+      <li>Boolean</li>
+      <li>Null</li>
+      <li>Undefined</li>
+    </ol>
+  </body>
+</html>
