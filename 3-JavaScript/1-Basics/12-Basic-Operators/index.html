@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Basic Operators" />
+    <title>JavaScript - Basic Operators</title>
+    <script>
+      // Basic Operators
+      // Terms: unary, binary, operator, operand
+      // operator: Addition (+), Subtraction (-), Multiplication (*), Division (/)
+      // operand: Ex: 5 + 3 => "+" is operator, "5" and "3" are operands
+      // binary: Ex: 5 * 2, binary expression (two operands)
+      // unary: Ex: -5, unary expression (one operand)
+
+      // Unary
+      let x = 1;
+      x = -x;
+      console.log(x); // -1
+
+      // Binary
+      let num1 = 3,
+        num2 = 5;
+      console.log(num1 + num2); // 8
+
+      // Addition (+), Subtraction (-), Multiplication (*), Division (/)
+      // Modulo (%), Exponentiation (**)
+      console.log(2 + 3); // 5
+      console.log(10 - 5); // 5
+      console.log(5 * 2); // 10
+      console.log(20 / 2); // 10
+      console.log(18 % 5); // 3
+      console.log(5 ** 2); // 5^2 => 5 * 5 => 25
+
+      // String concatenation, using binary "+"
+      let firstName = "John",
+        lastName = "Jack";
+      console.log(firstName + lastName);
+
+      // Numeric conversion, using unary "+"
+      let value1 = "2";
+      value2 = "3";
+      console.log(+value1 + +value2); // 5
+
+      // Operator precedance
+      // BODMAS
+      // (2 + 5) - 10 * 2
+      // 7 - 10 * 2
+      // 7 - 20
+      // -13
+
+      // let x = -10
+      // 1 + 2 * 2 => 1 + 4 => 5
+
+      // Assignment (return a value)
+      let operatorPrecedance = 2 * 2 + 1; // 4 + 1 => 5
+      console.log(operatorPrecedance); // 5
+
+      let a = 1,
+        b = 2;
+      let c = 3 - (a = b + 1); // (a = 2 + 1) => (a = 3) => 3 - 3 => 0
+      console.log(a); // 3
+      console.log(c); // 0
+
+      let x1, y1, z1;
+      x1 = y1 = z1 = 2 * 5; // 10
+      console.log(x1); // 10
+      console.log(y1); // 10
+      console.log(z1); // 10
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Basic Operators</h2>
+  </body>
+</html>
