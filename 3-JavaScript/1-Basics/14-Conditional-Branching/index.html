@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Conditional branching" />
+    <title>JavaScript - Conditional branching</title>
+    <script>
+      // JavaScript Conditional branching
+      // 1. "if" statement
+      // 2. "else" clause
+      // 3. "else if"
+      // 4. Conditional operator "?"
+      // 5. Multiple conditional operator "?"
+
+      // Perform different actions based on different conditions
+      // Ex:
+      // (condition) => true => some task
+      //             => false => some diferent task
+      // ( 10 > 5 ) => first value is bigger
+      // ( 5 > 10 ) => first value is not bigger
+
+      // "if" statement
+      // Syntax
+      // if(condition) { // true
+      // statements
+      // }
+
+      if (20 > 5) {
+        // true
+        console.log("First value is greater than second value");
+        // alert("Hello...");
+      }
+
+      //   let year = prompt("Enter your year of birth?", 2020); // 1950
+      //   if (year == 2020) {
+      //     // 1950 == 2020 // false
+      //     console.log("You entered 2020");
+      //   }
+      // let value = "hello";
+      if ("value") {
+        // 0, false, null, undefined, NaN => false
+        // condition, true, 1 or any value (both number and string) => true
+        console.log("The condition is true");
+      }
+
+      // "else" clause
+      if (1 > 5) {
+        console.log("The first value is greater than second");
+      }
+
+      // Syntax
+      // if (condition) { // true
+      // statements
+      // } else {
+      // statements
+      // }
+
+      if (10 > 5) {
+        console.log("The first value is greater than second");
+      } else {
+        console.log("The second value is greater than first");
+      }
+
+      // multiple conditions - "else if"
+      // Syntax
+      /*
+      if (condition-1) { // true
+            // statement -1
+      } else if (condition-2) { // true
+            // statement - 2
+      } else if (condition-3) { // true
+            // statement - 3
+      } else {
+            // statement - 4
+      }
+      */
+
+      let currentYear = prompt("Enter the current year", 2022);
+      if (currentYear < 2022) {
+        // 2000 < 2022
+        console.log("Too early"); // Too early
+      } else if (currentYear > 2022) {
+        // 2022 > 2022
+        console.log("Too late"); // Too late
+      } else {
+        console.log("Exactly");
+      }
+
+      // Conditional operator or Ternary operator
+      // "?" and ":"
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Conditional branching</h2>
+  </body>
+</html>
