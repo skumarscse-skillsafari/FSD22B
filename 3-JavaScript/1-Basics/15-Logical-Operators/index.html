@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Logical Operators" />
+    <title>JavaScript - Logical Operators</title>
+    <script>
+      // Logical Operators
+      // 1. OR (||)
+      // 2. AND (&&)
+      // 3. NOT (!)
+      // 4. Nullish Coalescing (??)
+
+      // OR (||)
+      // Ex:
+      //   let time = prompt("Enter the time", 10);
+      //   if (time < 10 || time > 18) {
+      //     console.log("The office is closed");
+      //   } else {
+      //     console.log("The office is open");
+      //   }
+
+      /*
+      condition-1   condition-2     result
+      true          true            true    // truthy
+      true          false           true    // truthy
+      false         true            true    // truthy
+      false         false           false   // falsy
+      */
+      if (2 > 10 || 1 > 5) {
+        // false || false
+        console.log("Truthy");
+      } else {
+        console.log("Falsy");
+      }
+
+      // OR => "||" finds the first truthy value
+      // result = condition-1 || condition-2 || condition-3;
+      // Evaluate operands from left to right
+      // For each operands, converts it to boolean. if the result is "true", stops and return the
+      //                    value of the corresponding operand
+      // if all the operands have been evaluated as "false", return the value of last operand
+
+      let result = 1 || 0;
+      console.log(result);
+
+      let result2 = false || 0 || undefined;
+      console.log(result2);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Logical Operators</h2>
+  </body>
+</html>

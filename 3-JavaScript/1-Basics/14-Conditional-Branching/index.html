@@ -23,9 +23,11 @@
 
       // "if" statement
       // Syntax
-      // if(condition) { // true
-      // statements
-      // }
+      /*
+        if(condition) { // true
+            // statements
+        } 
+      */
 
       if (20 > 5) {
         // true
@@ -39,9 +41,9 @@
       //     console.log("You entered 2020");
       //   }
       // let value = "hello";
-      if ("value") {
+      if ("hello") {
         // 0, false, null, undefined, NaN => false
-        // condition, true, 1 or any value (both number and string) => true
+        // true condition, true, 1 or any value (both number and string) => true
         console.log("The condition is true");
       }
 
@@ -77,19 +79,57 @@
       }
       */
 
-      let currentYear = prompt("Enter the current year", 2022);
-      if (currentYear < 2022) {
-        // 2000 < 2022
-        console.log("Too early"); // Too early
-      } else if (currentYear > 2022) {
-        // 2022 > 2022
-        console.log("Too late"); // Too late
-      } else {
-        console.log("Exactly");
-      }
+      //   let currentYear = prompt("Enter the current year", 2022);
+      //   if (currentYear < 2022) {
+      //     // 2000 < 2022
+      //     console.log("Too early"); // Too early
+      //   } else if (currentYear > 2022) {
+      //     // 2022 > 2022
+      //     console.log("Too late"); // Too late
+      //   } else {
+      //     console.log("Exactly");
+      //   }
 
       // Conditional operator or Ternary operator
       // "?" and ":"
+      // Syntax
+      // (condition) ? "true" : "false"
+      //   if (20 > 5) {
+      //     console.log("First value is greater");
+      //   } else {
+      //     console.log("Second value is greater");
+      //   }
+
+      2 > 5
+        ? console.log("First value is greater")
+        : console.log("Second value is greater");
+
+      //   let age = prompt("How old are you?", 18);
+      //   if (age > 18) {
+      //     console.log("Access Granted");
+      //   } else {
+      //     console.log("Access Denied");
+      //   }
+      //   let age = prompt("How old are you?", 18);
+      //   age > 18 ? console.log("Access Granted") : console.log("Access Denied");
+
+      // Multiple "?"
+      //   let currentYear = prompt("Enter the current year", 2022);
+      //   if (currentYear < 2022) {
+      //     // 2000 < 2022
+      //     console.log("Too early"); // Too early
+      //   } else if (currentYear > 2022) {
+      //     // 2022 > 2022
+      //     console.log("Too late"); // Too late
+      //   } else {
+      //     console.log("Exactly");
+      //   }
+      let currentYear = prompt("Enter the current year", 2022);
+      currentYear < 2022
+        ? console.log("Too early")
+        : currentYear > 2022
+        ? console.log("Too late")
+        : console.log("Exactly");
     </script>
   </head>
   <body>
