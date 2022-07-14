@@ -13,7 +13,7 @@
       // 3. NOT (!)
       // 4. Nullish Coalescing (??)
 
-      // OR (||)
+      // OR (||) => condition is "true", either anyone of the "condition" or "operand" turns "true"
       // Ex:
       //   let time = prompt("Enter the time", 10);
       //   if (time < 10 || time > 18) {
@@ -36,7 +36,7 @@
         console.log("Falsy");
       }
 
-      // OR => "||" finds the first truthy value
+      // OR => "||" finds the first "truthy" value
       // result = condition-1 || condition-2 || condition-3;
       // Evaluate operands from left to right
       // For each operands, converts it to boolean. if the result is "true", stops and return the
@@ -44,10 +44,85 @@
       // if all the operands have been evaluated as "false", return the value of last operand
 
       let result = 1 || 0;
-      console.log(result);
+      console.log(result); // 1
 
       let result2 = false || 0 || undefined;
-      console.log(result2);
+      console.log(result2); // Hello
+
+      // short-circuiting
+      let result1 = 0 || "Hello";
+      console.log(result1);
+      console.log(null || 0);
+
+      // AND (&&) => condition turns "true", only if all the "condition" or "operands" are "true"
+      let hour = 12;
+      let minutes = 30;
+      if (hour == 12 && minutes == 30) {
+        console.log("The time is: 12:30");
+      } else {
+        console.log("Invalid time.");
+      }
+
+      /*
+      condition-1   condition-2     result
+      true          true            true    // truthy
+      true          false           false   // falsy
+      false         true            false   // falsy
+      false         false           false   // falsy
+      */
+
+      // AND => "&&" finds the first "falsy" value
+      // result = condition-1 && condition-2 && condition-3;
+      // Evaluate operands from left to right
+      // For each operands, converts it to boolean. if the result is "false", stops and return the
+      //                    value of the corresponding operand
+      // if all the operands have been evaluated as "true", return the value of last operand
+
+      let firstName = "SkillSafari";
+      let lastName = "EduKeys";
+      let nickName = undefined;
+      let name = firstName && lastName && nickName;
+      console.log(name); // undefined
+
+      // short-circuiting
+      console.log(null && "world");
+
+      // NOT (!) => inverse the given result
+      // result = !value;
+      // true => false
+      // false => true
+      let value1 = false;
+      console.log(!value1);
+
+      let value2 = null;
+      console.log(!!value2);
+
+      let value3 = "Hello";
+      console.log(!!value3);
+
+      // Nullish coalescing operator (??)
+      // ?? => return first 'defined' operand value
+      // || => return first 'truthy' operand value
+      // a ?? b;
+      // return 'a' if "a" is defined
+      // return 'b' if "a" is not defined
+
+      let user;
+      console.log(user ?? "Guest");
+
+      let name1 = null;
+      let name2 = undefined;
+      let name3 = "hello";
+      console.log(name1 ?? name2 ?? name3); // hello
+
+      let name4 = null;
+      let name5 = undefined;
+      let name6 = "hello";
+      console.log(name4 || name5 || name6); // hello
+
+      let height = 0;
+      console.log(height || 100); // 100
+      console.log(height ?? 100); // 0
     </script>
   </head>
   <body>
