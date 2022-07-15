@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Loops" />
+    <title>JavaScript - Loops</title>
+    <script>
+      // Loops
+      // 1. while
+      // 2. do...while
+      // 3. for
+
+      // Other loops: for...in, for...of
+
+      // Loops are a way to repeat the same code multiple times
+
+      // console.log("Hello..");
+
+      // 1. intialization
+      // 2. condition
+      // 3. increment/decrement
+
+      // 1. while
+      // entry-check loop
+      // Syntax
+      /*
+        initialization;
+        while (condition) {
+              // statements;
+              // loop body;
+              // increment/decrement;
+        }
+        */
+
+      // iteration => executing the loop body, performing ince/dec, checking the condition everytime
+
+      //   console.log("while...loop...");
+      //   let init = 5;
+      //   while (init >= 1) {
+      //     // 1 <= 10 // 2 <= 10 // 3 <= 10 .... 10 <= 10 // 11 <= 10
+      //     console.log("while...loop...:" + init); // while...loop...
+      //     init--; // init = init + 1; // 2 // 3 // 4 ... // 11
+      //   }
+      //   console.log("End of the loop...");
+
+      // do...while
+      // exit-check loop
+      // runs the loop atleast once => condition is false in first iteration
+      // Syntax
+      /*
+        initialization;
+        do {
+          // loop body
+          // statements
+          // increment/decrement
+        } while (condition)
+        */
+
+      //   let init = 1;
+      //   do {
+      //     console.log("do...while...:" + init);
+      //     init++; // init = 1 => 2 => 3
+      //   } while (init <= 5); // 2 <= 5 // 3 <= 5 ... 6 <= 5
+      //   console.log("End...");
+
+      // for
+      // Syntax
+      /*
+         for (initialization; condition; increment/decrement) {
+          // loop body
+         }
+        */
+
+      //   for (let init = 1; init <= 5; init++) {
+      //     // 1 <= 5 // 2 <= 5 ... 5 <= 5 // 6 <= 5
+      //     console.log("for...:" + init); //
+      //   }
+      //   console.log("End...");
+
+      // skipping the parts
+      // initialization
+      //   let init = 1;
+      //   for (; init <= 5; init++) {
+      //     console.log("Skip initialization: " + init);
+      //   }
+
+      // increment/decrement
+      //   let init = 1;
+      //   for (; init <= 5; ) {
+      //     console.log("skip increment: " + init);
+      //     init++;
+      //   }
+
+      // break => exit from the loop
+      //   let init = 1;
+      //   while (init <= 5) {
+      //     //  1 <= 5 // 2 <= 5 // 3 <= 5
+      //     console.log("Break...:" + init); //
+      //     if (init == 3) break; // 1 == 3 // 2 == 3 // 3 == 3
+      //     init++; // 2 // 3 //4
+      //   }
+
+      // continue => skip the specific iteration
+      for (let init = 1; init <= 5; init++) {
+        if (init == 4) continue;
+        console.log("continue: " + init);
+      }
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Loops</h2>
+  </body>
+</html>
