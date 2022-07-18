@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Switch Statement" />
+    <title>JavaScript - Switch Statement</title>
+    <script>
+      // Switch Statement
+      // A switch statement is an alternative for multiple "if" checks
+      // Descriptive way of compare a value with multiple variants
+      // Syntax
+      /*
+        switch(x) {
+            case 'value-1':
+                // statement;
+                // break;
+            case 'value-2':
+                // statement;
+                // break;
+            case 'value-n':
+                // statement;
+                // break;
+            default:
+                // statement;
+                // break;
+        }
+        */
+      //   let value = 4;
+      //   switch (
+      //     value // 2
+      //   ) {
+      //     case 1:
+      //       console.log("One...");
+      //       break;
+      //     case 2:
+      //       console.log("Two...");
+      //       break;
+      //     case 3:
+      //       console.log("Three");
+      //       break;
+      //     default:
+      //       console.log("Enter the value between 1 and 3");
+      //       break;
+      //   }
+      //   console.log("End...");
+
+      // Compare the value with "Strict Equality operator"
+      //   let value = "1";
+      //   switch (
+      //     value // 1
+      //   ) {
+      //     case 1: // 1 === 1
+      //       console.log("One...");
+      //       break;
+      //     case 2:
+      //       console.log("Two...");
+      //       break;
+      //     case 3:
+      //       console.log("Three");
+      //       break;
+      //     default:
+      //       console.log("Enter the value between 1 and 3");
+      //       break;
+      //   }
+      //   console.log("End...");
+
+      // Skipping "break
+      //   let value = prompt("Enter any number", 1); // "1"
+      //   switch (
+      //     +value // 1
+      //   ) {
+      //     case 1: // 1 === 1
+      //       console.log("One...");
+      //       break;
+      //     case 2:
+      //       console.log("Two...");
+      //       break;
+      //     case 3:
+      //       console.log("Three");
+      //       break;
+      //     default:
+      //       console.log("Enter the value between 1 and 3");
+      //       break;
+      //   }
+      //   console.log("End...");
+
+      // Assigning string value to the "cases"
+      //   let operand1 = 10;
+      //   let operand2 = 20;
+      //   let operation = prompt("Enter the operator", "ADD");
+      //   switch (operation) {
+      //     case "ADD": // 1 === 1
+      //       console.log(operand1 + operand2); // 10 + 20 => 30
+      //       break;
+      //     case "SUB":
+      //       console.log(operand1 - operand2); // 10 - 20 => -10
+      //       break;
+      //     case "MUL":
+      //       console.log(operand1 * operand2); // 10 * 20 => 200
+      //       break;
+      //     case "DIV":
+      //       console.log(operand1 / operand2); // 10 / 20 => 0.5
+      //       break;
+      //     default:
+      //       console.log("Enter either ADD / SUB / MUL / DIV");
+      //       break;
+      //   }
+      //   console.log("End...");
+
+      // Grouping the cases
+      let value = 3;
+      switch (
+        value // 1
+      ) {
+        case 1: // 1 === 1
+          console.log("One...");
+          break;
+        case 2:
+        case 3:
+          console.log("Two...");
+          console.log("Three");
+          break;
+        default:
+          console.log("Enter the value between 1 and 3");
+          break;
+      }
+      console.log("End...");
+
+      // let fruits = ["Apple", "Orange", "Banana"];
+      // switch (
+      //   fruits[3] // undefined
+      // ) {
+      //   case "Apple": // "Apple" === "Apple"
+      //     console.log("Apple");
+      //     break;
+      //   case "Orange":
+      //     console.log("Orange");
+      //     break;
+      //   case "Banana":
+      //     console.log("Banana");
+      //     break;
+
+      //   default:
+      //     console.log("No match found");
+      //     break;
+      // }
+
+      let fruits = [
+        {
+          apple: "apple is in red color",
+          orange: "orange is in orange color",
+          mango: "mango is in yellow color",
+        },
+      ];
+      // console.log(fruits[0].apple);
+      switch (
+        fruits[0].mango // "apple is in red color"
+      ) {
+        case "apple is in red color":
+          console.log(fruits[0].apple); // console.log("apple is in red color")
+          break;
+        case "orange is in orange color":
+          console.log(fruits[0].orange); // console.log("apple is in red color")
+          break;
+        case "mango is in yellow color":
+          console.log(fruits[0].mango); // console.log("apple is in red color")
+          break;
+
+        default:
+          console.log("No match found");
+          break;
+      }
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Switch Statement</h2>
+  </body>
+</html>
