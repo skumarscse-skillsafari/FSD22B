@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Functions" />
+    <title>JavaScript - Functions</title>
+    <script>
+      // Functions / Methods
+      // "Building blocks" of the program
+      // Allow the code to be called many times without repetation
+
+      // alert(), prompt(), confirm(), console.log()
+
+      // Function Declaration
+      // Syntax
+      /*
+        function functionName (parameter-1, parameter-2,..., parameter-N) {
+            // function body
+            // statement 
+            // expression
+        }
+        */
+      // Calling the function
+      // Syntax
+      // functionName(parameterValue-1, parameterValue-2,..., parameterValue-N);
+
+      //   let num = 10;
+      //   for (let val = 0; val <= num; val++) {
+      //     console.log(val);
+      //   }
+
+      //   if (10 > 5) {
+      //     console.log("Number-1 is Greater");
+      //   } else {
+      //     console.log("Number-2 is Greater");
+      //   }
+
+      // Function Declaration
+      //   function displayMessage() {
+      //     console.log("Welcome to the Functions");
+      //     let num1 = 10,
+      //       num2 = 20;
+      //     console.log("The SUM is:" + (num1 + num2));
+      //   }
+
+      //   // Call the function
+      //   displayMessage();
+      //   displayMessage();
+      //   displayMessage();
+
+      //   console.log("Welcome to the Functions");
+      //   let num1 = 10,
+      //     num2 = 20;
+      //   console.log("The SUM is:" + (num1 + num2));
+      //   console.log("Welcome to the Functions");
+      //   let num3 = 10,
+      //     num4 = 20;
+      //   console.log("The SUM is:" + (num3 + num4));
+      //   console.log("Welcome to the Functions");
+      //   let num5 = 10,
+      //     num6 = 20;
+      //   console.log("The SUM is:" + (num5 + num6));
+
+      // Local Variables
+      //   function displayMessage() {
+      //     let message = "Hello, I am function..."; // locally available only inside the function body
+      //     console.log(message);
+      //   }
+      //   displayMessage();
+      //   console.log(message); // Error
+
+      // Outer variables
+      //   let firstName = "SkillSafari";
+      //   function displayName() {
+      //     let name = firstName + " EduKeys"; // SkillSafari EduKeys
+      //     let lastName = "John";
+      //     console.log(name);
+      //   }
+      //   displayName();
+      //   console.log(firstName);
+      //   console.log(name);
+      //   console.log(lastName);
+
+      //   let firstName = "John";
+      //   function displayName() {
+      //     let lastName = "Jack";
+      //     // firstName = "SkillSafari";
+      //     let firstName = "SkillSafari";
+      //     console.log(firstName, lastName); // SkillSafari Jack
+      //   }
+      //   displayName();
+      //   console.log(firstName); // John
+
+      // Parameters
+      //   function displayName(firstName, lastName) {
+      //     // let firstName = "SkillSafari", lastName = "EduKeys"
+      //     console.log(firstName, lastName);
+      //   }
+      //   displayName("SkillSafari", "EduKeys");
+      //   displayName("John", "Jack");
+
+      //   function displayName(firstName, lastName) {
+      //     // let firstName = "John", lastName = "Jack"
+      //     firstName = "Mary";
+      //     lastName = "Robert";
+      //     console.log(firstName, lastName);
+      //   }
+      //   let name1 = "John";
+      //   let name2 = "Jack";
+      //   displayName(name1, name2);
+
+      //   function sum(num1, num2) {
+      //     console.log(num1 + num2);
+      //   }
+      //   sum(10, 2);
+      //   sum(20, 86);
+
+      // Default values
+      //   function displayName(firstName, lastName = "Robert") {
+      //     console.log(firstName, lastName);
+      //   }
+      //   displayName("John");
+      //   displayName("Jack");
+      //   displayName("Mary");
+      //   displayName("Johnson", "Jack");
+
+      // Returning a value
+      //   function sum(a, b) {
+      //     //  console.log(a + b);
+      //     let c = a + b;
+      //     return c; // 5
+      //   }
+      //   let result = sum(2, 3); // 5
+      //   console.log(result);
+
+      function displayName(firstName, lastName) {
+        let name = firstName + lastName;
+        return name;
+        // return 3;
+        // console.log("Will i display?");
+      }
+      let output = displayName("John", "Jack");
+      console.log(output);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Functions</h2>
+  </body>
+</html>
