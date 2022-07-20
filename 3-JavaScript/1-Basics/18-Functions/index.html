@@ -135,14 +135,25 @@
       //   let result = sum(2, 3); // 5
       //   console.log(result);
 
-      function displayName(firstName, lastName) {
-        let name = firstName + lastName;
-        return name;
-        // return 3;
-        // console.log("Will i display?");
+      // function displayName(firstName, lastName) {
+      //   let name = firstName + lastName;
+      //   return name;
+      //   // return 3;
+      //   // console.log("Will i display?");
+      // }
+      // let output = displayName("John", "Jack");
+      // console.log(output);
+
+      function oddEven(num) {
+        // num = 9
+        if (num % 2 == 0) {
+          // 9 % 2 => 1
+          return "Even";
+        }
+        return "Odd";
       }
-      let output = displayName("John", "Jack");
-      console.log(output);
+      let result = oddEven(9);
+      console.log(result);
     </script>
   </head>
   <body>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Function Expressions" />
+    <title>JavaScript - Function Expressions</title>
+    <script>
+      // Function Declaration
+      //   function displayMessage() {
+      //     console.log("Hello...");
+      //   }
+      //   displayMessage();
+
+      // Function Expressions
+      // Assign a function to a variable as value
+      // let message = "Hello"
+      //   let displayMessage = function () {
+      //     console.log("I am Function Expression");
+      //   };
+      //   displayMessage(); // I am Function Expression
+      //   console.log(displayMessage()); // console.log() displayMessage()
+
+      // Copying
+      //   let firstName = "John"; // John
+      //   let lastName = firstName; // John
+      //   lastName = "Jack";
+      //   console.log(firstName, lastName); // John Jack
+
+      //   let displayMessage = function () {
+      //     console.log("Hello");
+      //   };
+      //   let showMessage = displayMessage;
+      //   console.log(displayMessage);
+      //   console.log(showMessage);
+      //   displayMessage(); // Hello
+      //   showMessage(); // Hello
+
+      // callback functions
+      // function inside a function
+      //   function allowAccess(question, yes, no) {
+      //     // question = "Are you Admin?" // yes = successMessage // no = errorMessage
+      //     //   let question = "Are you Admin?"
+      //     //   confirm(question)
+      //     if (confirm(question)) {
+      //       // true
+      //       yes();
+      //     } else {
+      //       no();
+      //     }
+      //   }
+
+      //   function successMessage() {
+      //     console.log("Access Granted...");
+      //   }
+
+      //   function errorMessage() {
+      //     console.log("Access Denied...");
+      //   }
+      //   allowAccess("Are you Admin?", successMessage, errorMessage);
+
+      // Simplified callback function
+      //   function allowAccess(question, yes, no) {
+      //     if (confirm(question)) yes();
+      //     else no();
+      //   }
+
+      //   allowAccess(
+      //     "Are you Admin?", // question
+      //     // yes
+      //     function () {
+      //       console.log("Access Granted...");
+      //     },
+      //     // no
+      //     function () {
+      //       console.log("Access Denied...");
+      //     }
+      //   );
+
+      // Function Expression Vs Function Declaration
+      //   showMessage();
+      //   // Function Declaration
+      //   function showMessage() {
+      //     console.log("Hello...");
+      //   }
+
+      // Function Expression
+      //   let showMessage = function () {
+      //     console.log("Hello...");
+      //   };
+      //   showMessage();
+      //   let isAdmin = prompt("Are you Admin?");
+      //   let message;
+      //   if (isAdmin === "yes") {
+      //     message = function () {
+      //       console.log("Access Allowed...");
+      //     };
+      //   } else {
+      //     message = function () {
+      //       console.log("Access Denied...");
+      //     };
+      //   }
+      //   message();
+
+      // Simplified
+      let isAdmin = prompt("Are you Admin?");
+      let message =
+        isAdmin === "yes"
+          ? function () {
+              console.log("Access Allowed...");
+            }
+          : function () {
+              console.log("Access Denied...");
+            };
+      message();
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Function Expressions</h2>
+  </body>
+</html>
