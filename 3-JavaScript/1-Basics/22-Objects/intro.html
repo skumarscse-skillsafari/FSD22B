@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Objects" />
+    <title>JavaScript - Objects</title>
+    <script>
+      // Objects
+      // Non - Primitive datatype => store more than one data in a single variable
+      // 1. Key or Property Name
+      // 2. Value or Property Value
+      // 3. Properties (Combination of both Key and Value)
+      // Data are stored in Key : Value pairs or propertyName : propertyValue
+      /*
+              Syntax
+              let objectName = {
+                  propertyName-1 (Key) : propertyValue-1 (Value),
+                  propertyName-2 : propertyVale-2,
+                                  .
+                                  .
+                                  .
+                  propertName-N   : propertyValue-N
+              }
+
+              Key or propertyName must be a type of "String"
+              Value or propertyValue can be of any data type (Primitive or Non-Primitive: Objects, Array, Function)
+              */
+
+      // Representation of an object
+      let user = {
+        firstName: "John",
+        lastName: "Jack",
+        age: 30,
+        isAdmin: true,
+      };
+
+      // Display all the properties of a object
+      console.log(user);
+
+      // Accessing Object properties using '.' (dot) operator
+      // Syntax
+      // objectName.propertyName or objectName.Key
+      console.log(user.isAdmin);
+      console.log(user.firstName);
+      console.log(user.lastName);
+      console.log(user.age);
+
+      // Accessing Object properties using '[]' (Square Bracket)
+      // Syntax
+      // objectName["propertyName"] or objectName["Key"]
+      console.log(user["firstName"]);
+      console.log(user["lastName"]);
+      console.log(user["age"]);
+      console.log(user["isAdmin"]);
+
+      // Name the object propertyName
+      // 1. lowercase
+      // 2. multi-words => camelCase notation
+      // Ex: first name => firstName (First letter of the second and following words must be in Uppercase)
+
+      // Add a new property
+      // Syntax
+      // objectName.newPropertyName = propertyValue
+      user.designation = "Full-Stack Developer";
+      user["zipCode"] = 500004;
+      console.log(user);
+
+      // Modify the propertyValue of existing property
+      // objectName.existingPropertName = newPropertyValue
+      user.firstName = "Robert";
+      console.log(user);
+
+      // delete a existing property
+      // Syntax
+      // delete objectName.propertName
+
+      delete user.zipCode;
+      console.log(user);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Objects</h2>
+  </body>
+</html>

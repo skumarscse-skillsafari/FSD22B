@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Arrow Functions" />
+    <title>JavaScript - Arrow Functions</title>
+    <script>
+      // Function Declaration
+      //   function displayName(firstName, lastName) {
+      //     let name = firstName + " " + lastName;
+      //     return name;
+      //   }
+      //   let result = displayName("John", "Jack");
+      //   console.log(result);
+
+      // Function Expression
+      // Anonymous Function - Function without name
+      //   let displayName = function (firstName, lastName) {
+      //     let name = firstName + " " + lastName;
+      //     return name;
+      //   };
+      //   let result = displayName("John", "Jack");
+      //   console.log(result);
+
+      // Arrow Functions
+      //   let displayName = (firstName, lastName) => {
+      //     let name = firstName + " " + lastName;
+      //     return name;
+      //   };
+      //   let result = displayName("John", "Jack");
+      //   console.log(result);
+
+      // Arrow Function shorter version
+      // Has only one statement inside the function body,
+      // Arrow function with multiple parameter
+      //   let sum = (a, b) => a + b;
+      //   let result = sum(10, 20);
+      //   console.log(result);
+
+      //   let displayName = (firstName, lastName) => firstName + " " + lastName;
+      //   let result = displayName("John", "Jack");
+      //   console.log(result);
+
+      // Arrow function with single parameter
+      //   let double = (num) => num * 2;
+      //   let result = double(5);
+      //   console.log(result);
+
+      // Arrow function without parameter
+      //   let messgae = () => "Hello...";
+      //   let result = messgae();
+      //   console.log(result);
+
+      //   let isAdmin = prompt("Are you Admin?");
+      //   let message =
+      //     isAdmin === "yes"
+      //       ? () => console.log("Access Allowed...")
+      //       : () => console.log("Access Denied...");
+      //   message();
+
+      // Arrow function with multiple statements inside function body
+      let displayName = (firstName, lastName) => {
+        console.log("I am from Arrow Function");
+        let name = firstName + " " + lastName;
+        return name;
+      };
+      let result = displayName("Jack", "John");
+      console.log(result);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Arrow Functions</h2>
+  </body>
+</html>

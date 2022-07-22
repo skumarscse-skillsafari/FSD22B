@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - IIFE" />
+    <title>JavaScript - IIFE</title>
+    <script>
+      // IIFE - Immediate Invocable Function Expression
+      // Function Expression / Arrow Function
+      //   let displayAge = (age) => {
+      //     console.log("The Age is:");
+      //     console.log(age);
+      //   };
+      //   displayAge(20);
+
+      // IIFE
+      /*
+      Syntax
+      (function Declaration)()
+      */
+      ((age) => {
+        console.log("The Age is:");
+        console.log(age);
+      })(20);
+
+      (() => console.log("I am IIFE function"))();
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - IIFE</h2>
+  </body>
+</html>
