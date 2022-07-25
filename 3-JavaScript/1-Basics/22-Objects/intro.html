@@ -29,31 +29,31 @@
               */
 
       // Representation of an object
-      let user = {
-        firstName: "John",
-        lastName: "Jack",
-        age: 30,
-        isAdmin: true,
-      };
+      //   let user = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //     isAdmin: true,
+      //   };
 
       // Display all the properties of a object
-      console.log(user);
+      // console.log(user);
 
       // Accessing Object properties using '.' (dot) operator
       // Syntax
       // objectName.propertyName or objectName.Key
-      console.log(user.isAdmin);
-      console.log(user.firstName);
-      console.log(user.lastName);
-      console.log(user.age);
+      //   console.log(user.isAdmin);
+      //   console.log(user.firstName);
+      //   console.log(user.lastName);
+      //   console.log(user.age);
 
       // Accessing Object properties using '[]' (Square Bracket)
       // Syntax
       // objectName["propertyName"] or objectName["Key"]
-      console.log(user["firstName"]);
-      console.log(user["lastName"]);
-      console.log(user["age"]);
-      console.log(user["isAdmin"]);
+      //   console.log(user["firstName"]);
+      //   console.log(user["lastName"]);
+      //   console.log(user["age"]);
+      //   console.log(user["isAdmin"]);
 
       // Name the object propertyName
       // 1. lowercase
@@ -63,21 +63,70 @@
       // Add a new property
       // Syntax
       // objectName.newPropertyName = propertyValue
-      user.designation = "Full-Stack Developer";
-      user["zipCode"] = 500004;
-      console.log(user);
+      //   user.designation = "Full-Stack Developer";
+      // user["zipCode"] = 500004;
+      //   console.log(user);
 
       // Modify the propertyValue of existing property
       // objectName.existingPropertName = newPropertyValue
-      user.firstName = "Robert";
-      console.log(user);
+      //   user.firstName = "Robert";
+      //   user["isAdmin"] = false;
+      //   console.log(user);
 
       // delete a existing property
       // Syntax
-      // delete objectName.propertName
+      // delete objectName.propertyName
 
-      delete user.zipCode;
+      //   delete user.zipCode;
+      //   delete user["isAdmin"];
+      //   console.log(user);
+
+      // Different methods of accessing object properties
+      // Ex: 1
+      //   let user = {
+      //     firstName: "John",
+      //     age: 30,
+      //     isAdmin: true,
+      //   };
+      //   let key = prompt("What do you want to know about the user?", "firstName");
+      //   // console.log(key);
+      //   console.log(user[key]); // user["firstName"]
+
+      //   console.log(user.key);
+
+      // Ex: 2
+      //   let subject = prompt("Which is your favourite subject", "maths"); // "maths"
+      //   let subjects = {
+      //     [subject]: 60, // subjects["maths"] = 60
+      //   };
+      //   console.log(subjects.maths); // 60
+
+      // Shorthand property
+      function createUser(firstName, lastName, age, isAdmin) {
+        // return `FirstName: ${firstName}, LastName: ${lastName}, Age: ${age}, isAdmin: ${isAdmin}`;
+        return {
+          firstName: firstName, // firstName: "John"
+          lastName: lastName, // lastName: "Jack"
+          age: age, // age: 25
+          isAdmin: isAdmin, // isAdmin: true
+        };
+      }
+      let user = createUser("John", "Jack", 25, true);
       console.log(user);
+      console.log(user.firstName);
+
+      //   function createUser(firstName, lastName, age, isAdmin) {
+      //     // return `FirstName: ${firstName}, LastName: ${lastName}, Age: ${age}, isAdmin: ${isAdmin}`;
+      //     return {
+      //       firstName: firstName, // firstName: "John"
+      //       lastName: lastName, // lastName: "Jack"
+      //       age: age, // age: 25
+      //       isAdmin: isAdmin, // isAdmin: true
+      //     };
+      //   }
+      //   let user = createUser("John", "Jack", 25, true);
+      //   console.log(user);
+      //   console.log(user.firstName);
     </script>
   </head>
   <body>
