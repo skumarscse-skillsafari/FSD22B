@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object methods and this" />
+    <title>Object methods and this</title>
+    <script>
+      // Object methods and this
+      //   let user = {
+      //     name: "John",
+      //     age: 20,
+      //     isAdmin: true,
+      //   };
+
+      //   // Functions/methods as properties
+      //   let displayMessage = function () {
+      //     console.log("Method as object property");
+      //   };
+      //   // Adding new property
+      //   user.displayMessage = displayMessage;
+      //   console.log(user);
+      //   user.displayMessage();
+
+      // Method shorthand
+      //   let user = {
+      //     name: "John",
+      //     age: 25,
+      //     // displayMessage: function () {
+      //     //   console.log("Method Shorthand property");
+      //     // },
+      //     displayMessage() {
+      //       console.log("Method Shorthand property");
+      //     },
+      //   };
+      //   console.log(user);
+      //   user.displayMessage();
+
+      // this
+      // To access the object, method can use the 'this' keyword
+      // 'this' act as object and we can access the properties inside the 'methods'
+      //   let user = {
+      //     name: "John",
+      //     age: 30,
+      //     displayMessage() {
+      //       console.log(this.name);
+      //       console.log(this.age);
+      //     },
+      //   };
+      //   console.log(user);
+      //   user.displayMessage();
+
+      // Ex: 2
+      let user = {
+        name: "John",
+      };
+      let admin = {
+        name: "Admin",
+      };
+      function displayName() {
+        console.log(this.name);
+      }
+      user.displayName = displayName;
+      admin.displayName = displayName;
+      user.displayName(); // John
+      admin.displayName(); // Admin
+    </script>
+  </head>
+  <body>
+    <h2>Object methods and this</h2>
+  </body>
+</html>
