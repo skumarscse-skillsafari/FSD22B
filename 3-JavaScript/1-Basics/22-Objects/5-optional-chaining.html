@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Optional Chaining - ?." />
+    <title>Optional Chaining - ?.</title>
+    <script>
+      // Optional Chaining - "?."
+      // Avoid the errors when accessing the non-existance property
+      //   let user = {};
+      //   console.log(user.address.street); // Error (trying to access the property, not exists in the object)
+      //   console.log("Test...");              // Terminate the application execution
+
+      //   let user = {};
+      //   console.log(user?.address?.street); //undefined
+      //   console.log("Test");
+
+      // "?." => stops evaluation if the value before "?." is "undefined" or "null" and returns "undefined"
+      // value?.prop
+      // works as "value.prop", if value exists
+      // otherwise (when the "value" is undefined/null) it returns "undefined"
+      //   let user = {};
+      //   console.log(user?.address?.street); // undefined?.street // undefined
+      //   console.log("Test");
+
+      // Short-circuiting
+      //   let user = null;
+      //   let age = 25;
+      //   user?.displayAge(age++); // undefined
+      //   console.log(age); // 25
+
+      // Works with function and square bracket
+      // Accessing functions
+      let userAdmin = {
+        admin() {
+          console.log("I am Admin");
+        },
+      };
+      let guestUser = {};
+      userAdmin.admin?.(); // I am Admin
+      guestUser.admin?.(); // nothing
+
+      // Accessing properties using square bracket method
+      let key = "firstName";
+      let user1 = {
+        firstName: "John",
+      };
+      let user2 = null;
+      console.log(user1?.[key]); // John
+      console.log(user2?.[key]); // undefined
+
+      // In delete
+      delete user?.name;
+    </script>
+  </head>
+  <body>
+    <h2>Optional Chaining - '?.'</h2>
+  </body>
+</html>

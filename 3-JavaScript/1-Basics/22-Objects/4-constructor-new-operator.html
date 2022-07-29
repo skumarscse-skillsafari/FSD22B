@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Constructor - new operator" />
+    <title>Constructor - new operator</title>
+    <script>
+      // Constructor - new operator
+      // {....} creating a single object. Real time, we are supposed to create multiple objects with same set of properties
+      // Constructor
+      // Syntax of the Constructor looks similar to a function/method
+      // First character of the constructor name must be in uppercase
+      // "new" keyword for initializing the constructor function
+
+      // Function
+      //   function user(id, name, designation, age) {
+      //     return {
+      //       id,
+      //       name,
+      //       designation,
+      //       age,
+      //     };
+      //   }
+      //   let john = user(1001, "John", "Tester", 25);
+      //   let jack = user(1002, "Jack", "Full-stack developer", 30);
+      //   let mary = user(1003, "Mary", "Project Manager", 35);
+      //   console.log(john.name);
+      //   console.log(jack.designation);
+      //   console.log(mary.age);
+
+      // Constructor
+      //   function User(id, name, designation, age) {
+      //     // this = {} (implicitly)
+      //     (this.id = id),
+      //       (this.name = name),
+      //       (this.designation = designation),
+      //       (this.age = age); // this = { id: 1001, name: "John", designation: "Tester", age: 20}; (implicitly)
+      //     // return this; (implicitly)
+      //   }
+      //   let john = new User(1001, "John", "Tester", 25); // this = {} (implicitly)
+      //   let jack = new User(1002, "Jack", "Full-stack developer", 20);
+      //   let mary = new User(1003, "Mary", "Project Manager", 35);
+      //   console.log(john.name);
+      //   console.log(jack.designation);
+      //   console.log(mary.age);
+
+      // While calling the constructor using "new" keyword, the following things will be happened,
+      // A empty object is created and assigned to 'this'
+      // The function body executes. Here, "this" object modifies by adding new properties
+      // The value of "this" is returned
+
+      // Method as property
+      function User(id, name, designation, age) {
+        (this.id = id),
+          (this.name = name),
+          (this.designation = designation),
+          (this.age = age);
+        this.userDetails = function () {
+          console.log(
+            `Id: ${this.id}, Name: ${this.name}, Designation: ${this.designation}, Age: ${this.age}`
+          );
+        };
+      }
+      let john = new User(1001, "John", "Tester", 25);
+      let jack = new User(1002, "Jack", "Full-stack developer", 20);
+      let mary = new User(1003, "Mary", "Project Manager", 35);
+      john.userDetails();
+      jack.userDetails();
+      mary.userDetails();
+    </script>
+  </head>
+  <body>
+    <h2>Constructor - new operator</h2>
+  </body>
+</html>
