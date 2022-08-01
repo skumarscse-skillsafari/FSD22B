@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Numbers" />
+    <title>JavaScript - Numbers</title>
+    <script>
+      // Numbers
+      // Primitive datatype
+      // Number, String, Object, Array
+      //   let num = 123;
+      //   let num1 = 12.3;
+
+      //   // Otherways to represent the Number
+      //   // 1 billion => 1,000,000,000
+      //   let billion = 1_000_000_000; // underscore as seperator
+      //   console.log(billion);
+
+      //   // Using 'e' for representing 'zeros'
+      //   // 1000000000 => 1e9
+      //   let billion1 = 1e9; // 1_000_000_000
+      //   console.log(billion1);
+
+      //   // 7_300_000_000 => 73e8
+      //   console.log(73e8);
+      //   // 7.3 billion => 7.3e9 => 7_300_000_000
+      //   console.log(7.3e9); // 7.3 * 1000000000
+      //   // 1e3 === 1 * 1000
+      //   // 1.23e6 === 1.23 * 1000000
+
+      //   // 1e-3 => 1 / 1000 => 0.001
+      //   console.log(1e-3);
+      //   // 1.23e-6 => 1.23 / 1000000 => 0.00000123
+      //   console.log(1.23e-6);
+      //   console.log(1234e-2); //1234 / 100 => 12.34
+
+      // toString(base) => base => 2 (binary), 8 (octal), 16 (hexadecimal), 32, 64 (return string)
+      //   let num = 255;
+      //   console.log(num.toString(2)); // 11111111
+      //   console.log(num.toString(16)); // ff
+
+      // Rounding
+      // Math.floor()
+      // Round down a number. Ex: 3.1 => 3 and -1.1 => -2
+      // let num = 3.6;
+      //   console.log(Math.floor(3.6)); // 3
+      //   console.log(Math.floor(-1.2)); // -2
+
+      //   // Math.ceil()
+      //   // Round up a number. Ex: 3.1 => 4 and -1.1 => -1
+      //   console.log(Math.ceil(3.2)); // 4
+      //   console.log(Math.ceil(-1.5)); // -1
+
+      //   // Math.round()
+      //   // Return nearest integer. Ex: 3.1 => 3. 3.5 or greater than .5 => return next whole number
+      //   // 3.5 => 4, 3.6 => 4, ..., 3.9 => 4
+      //   console.log(Math.round(3.4)); // 3
+      //   console.log(Math.round(10.8)); // 11
+
+      //   // Math.trunc()
+      //   // Remove anything after the decimal point. Ex: 3.4 => 3 and -1.5 => -1
+      //   console.log(Math.trunc(25.9)); // 25
+
+      //   // Math.random()
+      //   // Generate random numbers between 0 and 1
+      //   console.log(Math.floor(Math.random() * 100)); // 0 - 99
+
+      //   // Math.min()
+      //   console.log(Math.min(1, 2, 3, -1, -2, -3)); // -3
+
+      //   // Math.max()
+      //   console.log(Math.max(1, 2, 3, -1, -2, -3)); // 3
+
+      //   // Math.pow()
+      //   // Math.pow(num, power)
+      //   console.log(Math.pow(2, 10)); // 2^10 => 2 * 2 * 2 * 2 * 2 * 2 * 2 * 2 => 1024
+
+      // toFixed() - return string
+      let num = 12.34; // 12.3
+      console.log(num.toFixed(1)); // 12.34 => 12.3
+      console.log(num.toFixed(5)); // 12.34000
+
+      console.log(0.1 + 0.2 == 0.3); // false
+      console.log(0.1 + 0.2); // 0.300000000000000004 != 0.3 => false
+      let sum = 0.1 + 0.2;
+      console.log(sum.toFixed(2) == 0.3); // true
+
+      // Testing: isFinite() => Number and isNaN() => String
+      console.log(isNaN("2" + "abc")); // true
+      console.log(isNaN("str")); // true
+      console.log(isNaN(25)); // false
+
+      console.log(isFinite("hello")); // false
+      console.log(isFinite(258)); // true
+
+      // parseInt() and parseFloat()
+      console.log(parseInt("10px")); // 10
+      console.log(parseInt("abc123")); // NaN
+
+      console.log(parseFloat("12.5px")); // 12.5
+      console.log(parseFloat("px12.5")); // NaN
+      console.log(parseFloat("12.5.3")); // 12.5
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Numbers</h2>
+  </body>
+</html>
