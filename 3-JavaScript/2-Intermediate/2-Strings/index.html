@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Strings" />
+    <title>JavaScript - Strings</title>
+    <script>
+      // Strings - methods
+      // Strings => group of text characters
+      // Quotes
+      // 1. Single - 'string'
+      // 2. Double - "string"
+      // 3. Backticks - `string`
+
+      //   let single = "I'm single quoted string";
+      //   let double = "This is double quoted string";
+      //   let backtick = `This is backtick quoted string`;
+      //   // embed value or expression or statement with a string using ${value or exp or statement}
+      //   let backtick1 = `The sum is: ${5 + 5}`;
+      //   console.log(backtick1);
+      //   console.log(single);
+      //   console.log(double);
+      //   console.log(backtick);
+
+      //   function sum(a, b) {
+      //     return a + b;
+      //   }
+      //   console.log(`5 + 5 = ${sum(5, 5)}`);
+
+      // Special Characters
+      // 1. \n (backslash n) => newline
+      //   let newLine = "Maths \nPhysics \nChemistry \nComputer";
+      //   console.log(newLine);
+
+      //   // The time is 5'o clock
+      //   console.log(`The time is 5'o clock`);
+
+      //   // length property
+      //   let strLength = "Hello, there!";
+      //   console.log(strLength.length);
+
+      // Accessing characters
+      // Strings are made up of characters
+      // John => J-o-h-n
+
+      // 1. Index
+      // 2. charAt(index)
+
+      // Index
+      // John => [ 'J', 'o', 'h', 'n' ]
+      // 0 => "J", 1 => "o", 2 => "h", 3 => "n"
+      // Syntax
+      // varName[index]
+      //   let str = "John";
+      //   console.log(str[0]); // "J"
+      //   for (let i = 0; i < str.length; i++) {
+      //     console.log(str[i]);
+      //   }
+
+      // charAt(index)
+      // Syntax
+      // varName.charAt(index)
+      //   let str = "John";
+      //   // console.log(str.charAt(0)); // "J"
+      //   for (let i = 0; i < str.length; i++) {
+      //     console.log(str.charAt(i));
+      //   }
+
+      // Getting last character in a string - 'length'
+      //   let str = "John";
+      //   // str.length - 1 => 4 - 1 => 3
+      //   // str[3] => "n"
+      //   console.log(str[str.length - 1]); // "n"
+
+      // index vs charAt()
+      //   let str = "John";
+      //   console.log(str[100]); // undefined
+      //   console.log(str.charAt(100)); // '' (empty string)
+
+      // for...of
+      //   let str = `I'm from for in loop`;
+      //   for (const char of str) {
+      //     console.log(char);
+      //   }
+
+      // Strings are immutable
+      // cannot be changed/modified
+      //   let str = "Hi";
+      //   str[1] = "I"; // cannot be performed, strings are immutable
+      //   console.log(str[1]);
+
+      //   let str = "Hi";
+      //   str[0] = "h";
+      //   let str1 = "h" + str[1];
+      //   console.log(str1); // "hi"
+
+      // Changing the case
+      // 1. toUpperCase() - lower to upper
+      // 2. toLowerCase() - upper to lower
+      let lowerString = "this is in lowercase";
+      console.log(lowerString.toUpperCase());
+
+      let upperString = "THIS IS IN UPPERCASE";
+      console.log(upperString.toLowerCase());
+
+      // Convert and extract a single character to upper/lower case
+      let str = "India";
+      console.log(str[0].toLowerCase()); // "i"
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Strings</h2>
+  </body>
+</html>
