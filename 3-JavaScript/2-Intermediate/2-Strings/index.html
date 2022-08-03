@@ -12,7 +12,7 @@
       // Quotes
       // 1. Single - 'string'
       // 2. Double - "string"
-      // 3. Backticks - `string`
+      // 3. Backticks - `string` - ${value / exp / statement}
 
       //   let single = "I'm single quoted string";
       //   let double = "This is double quoted string";
@@ -27,7 +27,7 @@
       //   function sum(a, b) {
       //     return a + b;
       //   }
-      //   console.log(`5 + 5 = ${sum(5, 5)}`);
+      //   console.log(`5 + 5 = ${sum(5, 5)}`); // 10
 
       // Special Characters
       // 1. \n (backslash n) => newline
@@ -39,7 +39,7 @@
 
       //   // length property
       //   let strLength = "Hello, there!";
-      //   console.log(strLength.length);
+      //   console.log(strLength.length); // 13
 
       // Accessing characters
       // Strings are made up of characters
@@ -89,7 +89,7 @@
       // cannot be changed/modified
       //   let str = "Hi";
       //   str[1] = "I"; // cannot be performed, strings are immutable
-      //   console.log(str[1]);
+      //   console.log(str[1]); // "i"
 
       //   let str = "Hi";
       //   str[0] = "h";
@@ -99,15 +99,69 @@
       // Changing the case
       // 1. toUpperCase() - lower to upper
       // 2. toLowerCase() - upper to lower
-      let lowerString = "this is in lowercase";
-      console.log(lowerString.toUpperCase());
+      // let lowerString = "this is in lowercase";
+      // console.log(lowerString.toUpperCase()); // THIS IS IN LOWERCASE
 
-      let upperString = "THIS IS IN UPPERCASE";
-      console.log(upperString.toLowerCase());
+      // let upperString = "THIS IS IN UPPERCASE";
+      // console.log(upperString.toLowerCase()); // this is in uppercase
 
-      // Convert and extract a single character to upper/lower case
-      let str = "India";
-      console.log(str[0].toLowerCase()); // "i"
+      // // Convert and extract a single character to upper/lower case
+      // let str = "India";
+      // console.log(str[0].toLowerCase()); // "i"
+
+      // Searching a substring from a string
+      // Ex: "This is a string"
+      // Ex: This => T-h-i-s => Th-is
+
+      // str.indexOf(substr, pos)
+      // search operation from left to right and return first occurance
+      // let str = "searching for a substring";
+      // // if, the searching "substring" is present in the given "string", return "position" of the "substring"
+      // // if, no matches found, return "-1"
+      // console.log(str.indexOf("sub")); // 16
+      // console.log(str.indexOf("hello")); // -1
+
+      // console.log(str.indexOf("ing", 7)); // 22
+
+      // Algorithm
+      // All the occurances of the "substring" in the given "string"
+      // let str = "as well as well as";
+      // // console.log(str.indexOf("as")); // 0
+      // // console.log(str.indexOf("as", 1)); // 8
+      // // console.log(str.indexOf("as", 9)); // 16
+      // let searchStr = "as";
+      // let pos = 0;
+      // while (true) {
+      //   let foundPos = str.indexOf(searchStr, pos); // "as", 0 => 0 // "as", 1 => 8 // "as", 9 => 16
+      //   if (foundPos == -1) break;
+
+      //   console.log(`Found at: ${foundPos}`); // 0 // 8 // 16
+      //   pos = foundPos + 1; // 1 // 9 // 17
+      // }
+
+      // lastIndexOf("substr", pos)
+      // perform search operation from right to left and return first occurance
+      // let str = "searching a substring";
+      // console.log(str.indexOf("ing")); // 6
+      // console.log(str.lastIndexOf("ing")); // 18
+
+      // includes(), startsWith(), endsWith() => return true/false
+      // includes()
+      // Syntax
+      // str.includes("substr", pos) // true/false
+      let str = "searching for a substring";
+      console.log(str.includes("search")); // true
+      console.log(str.includes("hello")); // false
+
+      console.log(str.includes("for", 11)); // false
+
+      // str.startsWith("substr", pos)
+      console.log(str.startsWith("sea")); // true
+      console.log(str.startsWith("Sea")); // false
+
+      // str.endsWith("substr", endPos)
+      console.log(str.endsWith("ing", 5)); // false
+      console.log(str.endsWith("Or")); // false
     </script>
   </head>
   <body>
