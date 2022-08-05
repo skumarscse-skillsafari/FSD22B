@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Arrays" />
+    <title>JavaScript - Arrays</title>
+    <script>
+      // Arrays
+      // Arrays works similar like an object
+      // Object => store keyed collection of values (key: value)
+      // Array => store the ordered collections
+
+      // Declaration
+      // Object
+      // 1. let objName = { key: value };
+      // 2. let objName = new Object();
+      //   let user = new Object();
+      //   user.firstName = "John";
+      //   console.log(user);
+
+      // Array
+      // 1. let arrayName = [ "item-1", "item-2" ... ];
+      // 2. let arrayName = new Array();
+
+      //   let users = ["John", "Jack", "Mary"];
+      //   console.log(users); // [ "John", "Jack", "Mary" ]
+
+      //   // Accessing array elements - "index"
+      //   // Syntax
+      //   // arrName[index]
+      //   console.log(users[2]); // Mary
+
+      //   // Accessing non existing element index
+      //   console.log(users[3]); // undefined
+
+      //   // Adding new element
+      //   // Syntax
+      //   // arrName[index] = "value"
+      //   // objName["key"] = "value"
+      //   users[3] = "Robert";
+      //   console.log(users[3]); // Robert
+
+      //   // Modifying the element value
+      //   // Syntax
+      //   // arrName[index] = "newValue"
+      //   // objName["key"] = "newValue"
+      //   users[2] = "Sam";
+      //   console.log(users[2]); // Sam
+
+      //   // length - get the total elements in an array
+      //   console.log(users.length); // 4
+      //   console.log(users);
+
+      //   let arr = [1, 2, 3, 4, 5];
+      //   arr.length = 3; // [ 1, 2, 3] // irreversable
+      //   console.log(arr);
+      //   arr.length = 5;
+      //   console.log(arr);
+
+      //   let users = [];
+      //   users[100] = "John";
+      //   console.log(users.length); // 101
+      // Mix of elements
+      //   let mixArray = [
+      //     "John",
+      //     25,
+      //     true,
+      //     undefined,
+      //     { address: { street: "xyz" } },
+      //     function () {
+      //       console.log("Mix value in a array");
+      //     },
+      //   ];
+      //   // console.log(mixArray);
+      //   console.log(mixArray[0]); // John
+      //   console.log(mixArray[1]); // 25
+      //   console.log(mixArray[2]); // true
+      //   console.log(mixArray[3]); // undefined
+      //   console.log(mixArray[4].address.street); // { street: "xyz" } // xyz
+      //   mixArray[5](); // Mix value in a array
+
+      // length - 1
+      //   let users = ["John", "Jack", "Mary"];
+      //   //   console.log(users[users.length - 1]); // users[3 - 1] // Mary
+
+      //   // at(index)
+      //   //   console.log(users.at(-1)); // Mary
+      //   //   console.log(users.at(0)); // John
+
+      //   // push() and pop() => adding and removing element at the end of an array
+      //   // unshift() and shift() => adding and removing the element at the beginning of an array
+
+      //   // Iterating array elements
+      //   //   for (let i = 0; i < users.length; i++) {
+      //   //     console.log(users[i]);
+      //   //   }
+
+      //   // for...of - Array / String - Char
+      //   for (const element of users) {
+      //     console.log(element);
+      //   }
+
+      //   // for...in - Objects
+      //   for (const key in users) {
+      //     console.log(users[key]);
+      //   }
+
+      // new Array()
+      let users = new Array("John", "Jack", "Mary");
+      console.log(users);
+
+      let fruits = new Array(3);
+      fruits[0] = "Apple";
+      fruits[1] = "Mango";
+      fruits[2] = "Banana";
+      console.log(fruits);
+
+      let arr = new Array(5);
+      console.log(arr[0]); // undefined
+      console.log(arr.length); // 5
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Arrays</h2>
+  </body>
+</html>

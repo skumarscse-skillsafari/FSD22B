@@ -149,19 +149,64 @@
       // includes()
       // Syntax
       // str.includes("substr", pos) // true/false
-      let str = "searching for a substring";
-      console.log(str.includes("search")); // true
-      console.log(str.includes("hello")); // false
+      // let str = "searching for a substring";
+      // console.log(str.includes("search")); // true
+      // console.log(str.includes("hello")); // false
 
-      console.log(str.includes("for", 11)); // false
+      // console.log(str.includes("for", 11)); // false
 
-      // str.startsWith("substr", pos)
-      console.log(str.startsWith("sea")); // true
-      console.log(str.startsWith("Sea")); // false
+      // // str.startsWith("substr", pos)
+      // console.log(str.startsWith("sea")); // true
+      // console.log(str.startsWith("Sea")); // false
 
-      // str.endsWith("substr", endPos)
-      console.log(str.endsWith("ing", 5)); // false
-      console.log(str.endsWith("Or")); // false
+      // // str.endsWith("substr", endPos)
+      // console.log(str.endsWith("ing", 5)); // false
+      // console.log(str.endsWith("Or")); // false
+
+      // Getting the substring
+      // 1. substring()
+      // 2. substr()
+      // 3. slice()
+
+      // str.slice(startIndex, endIndex);
+      // Return the part of the string fron startIndex to endIndex (endIndex char not included)
+      // let str = "This is a string";
+      // console.log(str.slice(0, 4)); // This (startIndex char to endIndex - 1 char)
+      // console.log(str.slice(5, 7)); // is
+      // console.log(str.slice(10, 16)); // string
+      // console.log(str.slice(8)); // a string
+
+      // console.log(str.slice(-4, -1)); // rin
+      // console.log(str.slice(-6)); // string
+
+      // str.substring(startIndex, endIndex)
+      // 1. Negative index not allowed
+      // 2. endIndex can be given as first parameter
+      // let str = "This is a string";
+      // console.log(str.substring(0, 4)); // This
+      // console.log(str.substring(10, 16)); // string
+      // console.log(str.substring(8)); // a string
+
+      // console.log(str.substring(16, 10)); // string
+      // console.log(str.slice(16, 10));
+
+      // str.substr(startIndex, length)
+      // let str = "This is a string";
+      // console.log(str.substr(10, 6)); // string
+      // console.log(str.substr(-6, 6)); // string
+
+      // Comparing strings
+      // UTF-16 encoding table / ASCII table
+      // https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+      console.log("A" > "a"); // 65 > 97 => false
+      console.log("a" > "Z"); // 97 > 90 => true
+
+      // codePointAt(index)
+      let letter = "Zebra";
+      console.log(letter.codePointAt(2)); // 98
+
+      // String.fromCodePoint(decNum)
+      console.log(String.fromCodePoint(98)); // b
     </script>
   </head>
   <body>
