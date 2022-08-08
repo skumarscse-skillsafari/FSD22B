@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Array Methods" />
+    <title>Array Methods</title>
+    <script>
+      // Array Methods
+      // push() and pop()
+      // unshift() and shift()
+
+      // Deleting array element
+      //   let fruits = ["Apple", "Orange", "Banana"];
+      //   console.log(fruits);
+      //   delete fruits[1]; // Orange
+      //   console.log(fruits); [ "Apple", empty, "Banana"]
+      //   console.log(fruits.length); // 3
+
+      // splice() - remove / add a new element
+      // arr.splice(startIndex, deleteCount, "newEle-1",..., "newEle-N")
+      //   let subjects = ["English", "Computer", "Science"];
+      //   console.log(subjects);
+
+      //   // removing an element
+      //   // Single element
+      //   subjects.splice(0, 2);
+      //   console.log(subjects); // [ "Science" ]
+
+      // removing and adding the elements
+      //   let subjects = ["English", "Computer", "Science"]; // "Maths", "Physics"
+      //   subjects.splice(1, 1, "Maths", "Physics");
+      //   // console.log(subjects.splice(1, 1)); // [ "Computer" ]
+      //   console.log(subjects);
+
+      // adding a new element without deleting any element
+      //   let subjects = ["English", "Computer", "Science"];
+      //   subjects.splice(-1, 0, "Maths", "Physics");
+      //   console.log(subjects); // [ 'English', 'Computer', 'Maths', 'Physics', 'Science' ]
+
+      // Array - slice() // Sub-Array from Array
+      let subjects = ["English", "Computer", "Science", "Physics", "Chemistry"];
+      console.log(subjects.slice(1, 4)); // ["Computer", "Science", "Physics"]
+      console.log(subjects.slice(-3, 4)); //  ['Science', 'Physics']
+
+      // String - slice() // Sub-String from String
+      let str = "SkillSafari";
+      console.log(str.slice(5, 11)); // Safari
+    </script>
+  </head>
+  <body>
+    <h2>Array Methods</h2>
+  </body>
+</html>
