@@ -40,13 +40,110 @@
       //   console.log(subjects); // [ 'English', 'Computer', 'Maths', 'Physics', 'Science' ]
 
       // Array - slice() // Sub-Array from Array
-      let subjects = ["English", "Computer", "Science", "Physics", "Chemistry"];
-      console.log(subjects.slice(1, 4)); // ["Computer", "Science", "Physics"]
-      console.log(subjects.slice(-3, 4)); //  ['Science', 'Physics']
+      // let subjects = ["English", "Computer", "Science", "Physics", "Chemistry"];
+      // console.log(subjects.slice(1, 4)); // ["Computer", "Science", "Physics"]
+      // console.log(subjects.slice(-3, 4)); //  ['Science', 'Physics']
 
-      // String - slice() // Sub-String from String
-      let str = "SkillSafari";
-      console.log(str.slice(5, 11)); // Safari
+      // // String - slice() // Sub-String from String
+      // let str = "SkillSafari";
+      // console.log(str.slice(5, 11)); // Safari
+
+      // arr.concat(arg-1, ..., arg-N)
+      // Creates a new array that includes values from other arrays
+      // If 'arg' as an array / elements, it will be copied to the original array, but not added
+      // let fruits = ["Apple", "Orange"];
+      // console.log(fruits.concat(["Mango"], ["Banana"]));
+
+      // let arr = [1, 2];
+      // console.log(arr.concat([3, 4]));
+
+      // console.log(arr.concat([3, 4], [5, 6], [7, 8]));
+      // console.log(arr);
+
+      // forEach() = iterates the elements of an array
+      // let fruits = ["Orange", "Mango", "Apple", "Banana"];
+      // for (let i = 0; i < fruits.length; i++) {
+      //   console.log(fruits[i]);
+      // }
+
+      // Syntax
+      /*
+      arr.forEach(function(item, index, array){
+        // write the callback function body statements
+      })
+      */
+      // fruits.forEach(function (fruit, index, arr) {
+      //   console.log(`Item: ${fruit}, Index: ${index}, Array: ${arr}`);
+      // });
+
+      // Getting element only
+      // fruits.forEach(function (fruit) {
+      //   console.log(fruit);
+      // });
+
+      // Getting index only
+      // fruits.forEach(function (fruit, index) {
+      //   console.log(index);
+      // });
+
+      // Getting Array
+      // fruits.forEach(function (fruit, index, arr) {
+      //   console.log(arr);
+      // });
+
+      // Arrow function as callback function
+      // fruits.forEach((fruit) => console.log(fruit));
+
+      // Searching in array
+      // includes()
+      // indexOf()/lastIndexOf()
+
+      // arr.indexOf(searchElement, fromIndex)
+      // let fruits = ["Apple", "Mango", "Apple", "Banana"];
+      // console.log(fruits.indexOf("Banana")); //3
+      // console.log(fruits.indexOf("Mango", 2)); // -1
+      // console.log(fruits.lastIndexOf("Apple")); // 2
+
+      // arr.includes(searchElement, fromIndex) // true / false
+      // console.log(fruits.includes("Apple")); // true
+      // console.log(fruits.includes("Pineapple")); // false
+      // console.log(fruits.includes("Mango", 2)); // false
+
+      // find() and findIndex()/findLastIndex()
+      // filter()
+
+      // arr.find(callbackFn)
+      /*
+      arr.find(function(item, index, array) {
+        // if true is returned, item is returned and iteration is stopped
+        // for falsy scenario returns undefined
+      })
+      */
+      let fruits = ["Orange", "Mango", "Apple", "Banana"];
+      // let searchElement = fruits.find(function (fruit) {
+      //   // Apple
+      //   return fruit === "Apple"; // "Apple" === "Apple"
+      // });
+      let searchElement = fruits.find((fruit) => fruit === "Apple");
+      console.log(searchElement); // Apple
+
+      // let searchElementFalse = fruits.find(function (fruit) {
+      //   return fruit === "Pineapple";
+      // });
+      let searchElementFalse = fruits.find((fruit) => fruit === "Pineapple");
+      console.log(searchElementFalse); // undefined
+
+      // Object as array element
+      let users = [
+        { id: 1, name: "John" },
+        { id: 2, name: "Jack" },
+        { id: 3, name: "Mary" },
+        { id: 4, name: "Robert" },
+        { id: 5, name: "Mary" },
+      ];
+      let searchUser = users.find((user) => user.name === "Mary");
+      // let user = { id: 3, name: "Mary"}
+      console.log(searchUser); //  { id: 3, name: "Mary" }
     </script>
   </head>
   <body>
