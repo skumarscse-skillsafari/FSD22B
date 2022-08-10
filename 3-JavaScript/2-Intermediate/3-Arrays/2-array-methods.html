@@ -18,6 +18,7 @@
       //   console.log(fruits); [ "Apple", empty, "Banana"]
       //   console.log(fruits.length); // 3
 
+      // Remove and Add elements
       // splice() - remove / add a new element
       // arr.splice(startIndex, deleteCount, "newEle-1",..., "newEle-N")
       //   let subjects = ["English", "Computer", "Science"];
@@ -60,6 +61,7 @@
       // console.log(arr.concat([3, 4], [5, 6], [7, 8]));
       // console.log(arr);
 
+      // Iterating array elements
       // forEach() = iterates the elements of an array
       // let fruits = ["Orange", "Mango", "Apple", "Banana"];
       // for (let i = 0; i < fruits.length; i++) {
@@ -119,31 +121,131 @@
         // for falsy scenario returns undefined
       })
       */
-      let fruits = ["Orange", "Mango", "Apple", "Banana"];
-      // let searchElement = fruits.find(function (fruit) {
-      //   // Apple
-      //   return fruit === "Apple"; // "Apple" === "Apple"
-      // });
-      let searchElement = fruits.find((fruit) => fruit === "Apple");
-      console.log(searchElement); // Apple
+      // let fruits = ["Orange", "Mango", "Apple", "Banana"];
+      // // let searchElement = fruits.find(function (fruit) {
+      // //   // Apple
+      // //   return fruit === "Apple"; // "Apple" === "Apple"
+      // // });
+      // let searchElement = fruits.find((fruit) => fruit === "Apple");
+      // console.log(searchElement); // Apple
 
       // let searchElementFalse = fruits.find(function (fruit) {
       //   return fruit === "Pineapple";
       // });
-      let searchElementFalse = fruits.find((fruit) => fruit === "Pineapple");
-      console.log(searchElementFalse); // undefined
+      // let searchElementFalse = fruits.find((fruit) => fruit === "Pineapple");
+      // console.log(searchElementFalse); // undefined
 
-      // Object as array element
-      let users = [
-        { id: 1, name: "John" },
-        { id: 2, name: "Jack" },
-        { id: 3, name: "Mary" },
-        { id: 4, name: "Robert" },
-        { id: 5, name: "Mary" },
-      ];
-      let searchUser = users.find((user) => user.name === "Mary");
-      // let user = { id: 3, name: "Mary"}
-      console.log(searchUser); //  { id: 3, name: "Mary" }
+      // // Object as array element
+      // let users = [
+      //   { id: 1, name: "John" },
+      //   { id: 2, name: "Jack" },
+      //   { id: 3, name: "Mary" },
+      //   { id: 4, name: "Robert" },
+      //   { id: 5, name: "Mary" },
+      // ];
+      // let searchUser = users.find((user) => user.name === "Mary");
+      // // let user = { id: 3, name: "Mary"}
+      // console.log(searchUser); //  { id: 3, name: "Mary" }
+
+      // arr.filter(callback) // return "Array of matched elements"
+      /*
+      arr.filter(function (item, index, arr) {
+        // if true returned, item is pushed to results and the iteration continues
+        // if false returned, return an empty array
+      })
+      */
+      // let fruits = ["Apple", "Orange", "Mango", "Banana", "Mango"];
+      // // let fruitsArray = fruits.filter(function (fruit) {
+      // //   return fruit === "Mango";
+      // // });
+      // // console.log(fruitsArray); // [ "Mango", "Mango" ]
+
+      // let fruitsArray = fruits.filter((fruit) => fruit === "Pineapple");
+      // console.log(fruitsArray); // []
+
+      // let users = [
+      //   { id: 1, name: "John" },
+      //   { id: 2, name: "Jack" },
+      //   { id: 3, name: "Mary" },
+      //   { id: 4, name: "Robert" },
+      //   { id: 5, name: "Mary" },
+      // ];
+      // let searchUser = users.filter((user) => user.name === "Mary");
+      // console.log(searchUser);
+
+      // Transform an array
+      // map()
+      /*
+      arr.map(function(item, index, arr) {
+        // retuns the new value insted of given item
+      })
+      */
+      // let fruits = ["Apple", "Orange", "Mango", "Banana", "Mango"];
+      // console.log(fruits);
+      // let newArray = fruits.map(function (fruit) {
+      //   // Apple
+      //   return fruit.length;
+      // });
+      // console.log(newArray);
+
+      // let users = [
+      //   { id: 1, name: "John" },
+      //   { id: 2, name: "Jack" },
+      //   { id: 3, name: "Mary" },
+      //   { id: 4, name: "Robert" },
+      //   { id: 5, name: "Mary" },
+      // ];
+      // let newUserArray = users.map(function (user) {
+      //   // let user = { id: 1, name: "John" }
+      //   return user.name;
+      // });
+      // console.log(newUserArray);
+
+      // arr.reverse()
+      // let fruits = ["Apple", "Orange", "Mango", "Banana", "Mango"];
+      // console.log(fruits.reverse());
+
+      // split() and join()
+      // split(delimiter, limit) => we can convert the given value into an array by using some delimiter
+      // let fruits = "Apple Orange Mango Banana";
+      // console.log(fruits.split(" ")); // ['Apple', 'Orange', 'Mango', 'Banana']
+      // for (const fruit of fruits.split(" ")) {
+      //   console.log(fruit);
+      // }
+
+      // let message = "JavaScript";
+      // console.log(message.split("", 4)); // [ "J", "a", "v", "a", "S", "c", "r", "i", "p", "t" ]
+
+      // join(seperator)
+      // let fruits = ["Apple", "Orange", "Mango", "Banana", "Mango"];
+      // console.log(fruits.join("; ")); // "Apple; Orange; Mango; Banana; Mango"
+
+      // arr.reduce(callback)
+      /*
+      arr.reduce(function (accumulator, item, index, arr) {
+        // statement/logic
+      }, intialValue)
+      // accumulator => the result of the previous function call, equals "initalValue" the first time (if "initial is provided")
+      */
+      // let arr = [1, 2, 3, 4, 5];
+      // let result = arr.reduce(function (sum, currValue) {
+      //   return sum + currValue;
+      // }, 0);
+      // console.log(result); // 15
+      // // Iteration  sum   currValue   initial   result = sum + currValue
+      // //    1       0         1          0        1
+      // //    2       1         2          -        3
+      // //    3       3         3          -        6
+      // //    4       6         4          -        10
+      // //    5       10        5          -        15
+
+      // Array.isArray() // return boolean
+      // Check the array datatype
+      console.log(typeof { id: 1, name: "John" }); // object
+      console.log(typeof ["Maths", "Physics", "Chemistry"]); // object
+
+      console.log(Array.isArray({ id: 1, name: "John" })); // false
+      console.log(Array.isArray(["Maths", "Physics", "Chemistry"])); // true
     </script>
   </head>
   <body>
