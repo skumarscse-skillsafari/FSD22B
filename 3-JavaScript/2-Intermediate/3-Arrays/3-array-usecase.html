@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Array - Usecase Example" />
+    <title>Array - Usecase Example</title>
+    <script>
+      // Array - Usecase Example
+      // filter(), find(), map(), reduce(), every(), some(), fill(), flat()
+
+      let students = [
+        { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }, // [0]
+        { id: 2, name: "Jack", dept: "ECE", age: 19, isSelected: false }, // [1]
+        { id: 3, name: "Mary", dept: "EEE", age: 18, isSelected: true }, // [2]
+        { id: 4, name: "Robert", dept: "MECH", age: 22, isSelected: true }, // [3]
+      ];
+
+      // filter()
+      // Filter the students selected in the campus interview
+
+      //   let selectedStudents = [];
+      //   for (let i = 0; i < students.length; i++) {
+      //     let temp = students[i]; // let temp = { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }
+      //     if (temp.isSelected) {
+      //       selectedStudents.push(temp);
+      //     }
+      //   }
+      //   console.log(selectedStudents);
+      //   let selectedStudents = students.filter((student) => student.isSelected);
+      //   let selectedStudents = students.filter(function (student) {
+      //     return student.isSelected == true;
+      //   });
+      //   console.log(selectedStudents);
+
+      //   // filter the students with age : 18
+      //   let studentsByAge = students.filter((student) => student.age == 18);
+      //   console.log(studentsByAge);
+
+      // find()
+      // Find a student with id: 2
+      //   let studentById = students.find((student) => student.id == 2);
+      //   console.log(studentById);
+
+      // Transform
+      // map()
+      // Create newArray with new properties
+      //   let newArray = students.map((student) => {
+      //     // let student =  { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }
+      //     return {
+      //       rollNo: student.id,
+      //       firstName: student.name,
+      //     };
+      //   });
+      //   let newArray = students.map((student) => {
+      //     return {
+      //       rollNo: student.id,
+      //       firstName: student.name,
+      //     };
+      //   });
+      //   console.log(newArray);
+
+      // Create newArray with existing and new properties
+      let newArray = students.map((student) => {
+        // let student =  { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }
+        return {
+          ...student, // spread operator => add the new properties to an object along with existing properties
+          college: "SkillSafari",
+          city: "Chennai",
+        };
+      });
+      console.log(newArray);
+
+      // reduce()
+      // TotalAge of all the students
+      let totalAge = students.reduce((acc, student) => {
+        return acc + student.age;
+      }, 0);
+      // Iteration  initialValue    acc     student.age     result = acc + student.age
+      //    1           0           0           18          0 + 18 => 18
+      //    2           -           18          19          18 + 19 => 37
+      //    3           -           37          18          37 + 18 => 55
+      console.log(totalAge); // 55
+
+      // student with highestAge
+      let highestAge = students.reduce((highest, student) => {
+        return (highest.age || 0) > student.age ? highest : student;
+      }, {});
+      console.log(highestAge);
+      // Iteration      initialValue        highest     student     result
+      //    1               {}                 {}       students[0]   0 > 18 => students[0]
+      //    2               -              students[0]  students[1]   18 > 19 => students[1]
+      //    3               -              students[1]  students[2]   19 > 18 => students[1]
+    </script>
+  </head>
+  <body>
+    <h2>Array - Usecase Example</h2>
+  </body>
+</html>
