@@ -11,10 +11,42 @@
       // filter(), find(), map(), reduce(), every(), some(), fill(), flat()
 
       let students = [
-        { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }, // [0]
-        { id: 2, name: "Jack", dept: "ECE", age: 19, isSelected: false }, // [1]
-        { id: 3, name: "Mary", dept: "EEE", age: 18, isSelected: true }, // [2]
-        { id: 4, name: "Robert", dept: "MECH", age: 22, isSelected: true }, // [3]
+        {
+          id: 1,
+          name: "John",
+          dept: "CSE",
+          age: 18,
+          isSelected: true,
+          college: "SkillSafari",
+          percentage: 80,
+        }, // [0]
+        {
+          id: 2,
+          name: "Jack",
+          dept: "ECE",
+          age: 19,
+          isSelected: false,
+          college: "SkillSafari",
+          percentage: 70,
+        }, // [1]
+        {
+          id: 3,
+          name: "Mary",
+          dept: "EEE",
+          age: 18,
+          isSelected: true,
+          college: "SkillSafari",
+          percentage: 75,
+        }, // [2]
+        {
+          id: 4,
+          name: "Robert",
+          dept: "MECH",
+          age: 22,
+          isSelected: true,
+          college: "SkillSafari",
+          percentage: 85,
+        }, // [3]
       ];
 
       // filter()
@@ -62,36 +94,91 @@
       //   console.log(newArray);
 
       // Create newArray with existing and new properties
-      let newArray = students.map((student) => {
-        // let student =  { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }
-        return {
-          ...student, // spread operator => add the new properties to an object along with existing properties
-          college: "SkillSafari",
-          city: "Chennai",
-        };
-      });
-      console.log(newArray);
+      // let newArray = students.map((student) => {
+      //   // let student =  { id: 1, name: "John", dept: "CSE", age: 18, isSelected: true }
+      //   return {
+      //     ...student, // spread operator => add the new properties to an object along with existing properties
+      //     college: "SkillSafari",
+      //     city: "Chennai",
+      //   };
+      // });
+      // console.log(newArray);
 
       // reduce()
       // TotalAge of all the students
-      let totalAge = students.reduce((acc, student) => {
-        return acc + student.age;
-      }, 0);
-      // Iteration  initialValue    acc     student.age     result = acc + student.age
-      //    1           0           0           18          0 + 18 => 18
-      //    2           -           18          19          18 + 19 => 37
-      //    3           -           37          18          37 + 18 => 55
-      console.log(totalAge); // 55
+      // let totalAge = students.reduce((acc, student) => {
+      //   return acc + student.age;
+      // }, 0);
+      // // Iteration  initialValue    acc     student.age     result = acc + student.age
+      // //    1           0           0           18          0 + 18 => 18
+      // //    2           -           18          19          18 + 19 => 37
+      // //    3           -           37          18          37 + 18 => 55
+      // console.log(totalAge); // 55
 
-      // student with highestAge
-      let highestAge = students.reduce((highest, student) => {
-        return (highest.age || 0) > student.age ? highest : student;
-      }, {});
-      console.log(highestAge);
-      // Iteration      initialValue        highest     student     result
-      //    1               {}                 {}       students[0]   0 > 18 => students[0]
-      //    2               -              students[0]  students[1]   18 > 19 => students[1]
-      //    3               -              students[1]  students[2]   19 > 18 => students[1]
+      // // student with highestAge
+      // let highestAge = students.reduce((highest, student) => {
+      //   return (highest.age || 0) > student.age ? highest : student;
+      // }, {});
+      // console.log(highestAge);
+      // // Iteration      initialValue        highest     student     result
+      // //    1               {}                 {}       students[0]   0 > 18 => students[0]
+      // //    2               -              students[0]  students[1]   18 > 19 => students[1]
+      // //    3               -              students[1]  students[2]   19 > 18 => students[1]
+
+      // every() => return true if all the elements of the array satisfies the given condition, else return false
+      // return boolean as result
+      // All the element has "college" property with the value "SkillSafari"
+      // let everyArray = students.every((student) => {
+      //   return student.isSelected === true; // false
+      // });
+      // console.log(everyArray);
+
+      // some()
+      // let someArray = students.some((student) => {
+      //   return student.isSelected === true;
+      // });
+      // console.log(someArray); // true
+
+      // fill(value, start, end)
+      // start => starting index from where the array is to be filled with the given value
+      // We can fill the array with same specified value
+      // let numbers = Array(5).fill(5);
+      // console.log(numbers); // [ 5, 5, 5, 5 ]
+
+      // // fill without start and end
+      // let arr1 = [1, 2, 3, 4];
+      // // console.log(arr1.fill(6)); // [ 6, 6, 6, 6 ]
+
+      // // fill with value and start index
+      // // console.log(arr1.fill(6, 2)); // [ 1, 2, 6, 6 ]
+
+      // // fill with value, start and end index
+      // // console.log(arr1.fill(6, 2, 3)); // [ 1, 2, 6, 4 ]
+      // // console.log(arr1.fill(6, 1, 3)); //
+
+      // flat(depth)
+      // by default depth is '1'
+      // [ 1, 2, [3, 4], 5, [6, 7 ] ] => [ 1, 2, 3, 4, 5, 6, 7 ]
+      // let numbers = [1, 2, [3, 4], 5, [6, 7]]; // [ 1, 2, 3, 4, 5, 6, 7 ]
+      // console.log(numbers.flat()); // [ 1, 2, 3, 4, 5, 6, 7 ]
+
+      // let numbers = [1, 2, [3, 4, 5, [6, 7]]];
+      // console.log(numbers.flat()); // [ 1, 2, 3, 4, 5, [6, 7]]
+      // console.log(numbers.flat(2)); // [ 1, 2, 3, 4, 5, 6, 7 ]
+
+      // let numbers = [1, [2, [3, [4, [5, 6]]]], 7];
+      // console.log(numbers.flat(4)); // [ 1, 2, 3, 4, 5, 6, 7 ]
+
+      // Mix of Array methods
+      // students => totalPercentageOfSelectedStudents
+      let totalPercentageOfSelectedStudents = students
+        .filter((student) => {
+          return student.isSelected;
+        })
+        .reduce((acc, student) => {
+          return acc + student.percentage;
+        }, 0);
+      console.log(totalPercentageOfSelectedStudents); // 240
     </script>
   </head>
   <body>
