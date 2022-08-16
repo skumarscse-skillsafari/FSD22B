@@ -170,15 +170,15 @@
       // console.log(numbers.flat(4)); // [ 1, 2, 3, 4, 5, 6, 7 ]
 
       // Mix of Array methods
-      // students => totalPercentageOfSelectedStudents
-      let totalPercentageOfSelectedStudents = students
-        .filter((student) => {
-          return student.isSelected;
-        })
-        .reduce((acc, student) => {
+      // students => percentageOfSelectedStudents
+      let selectedStudents = students.filter((student) => student.isSelected);
+      let totalPercentageOfSelectedStudents = selectedStudents.reduce(
+        (acc, student) => {
           return acc + student.percentage;
-        }, 0);
-      console.log(totalPercentageOfSelectedStudents); // 240
+        },
+        0
+      );
+      console.log(totalPercentageOfSelectedStudents / selectedStudents.length); // 240
     </script>
   </head>
   <body>

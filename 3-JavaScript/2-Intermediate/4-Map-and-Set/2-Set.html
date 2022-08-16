@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Set" />
+    <title>JavaScript - Set</title>
+    <script>
+      // Set
+      // Set => special type collection - 'set of values' (without key), where each value may occurs only once
+      //   let numbers = [1, 2, 3, 1, 2, 3, 4, 5];
+      //   console.log(numbers);
+      //   let newNumbers = [...new Set(numbers)];
+      //   console.log(newNumbers);
+
+      // Methods and Properties
+      // let set = new Set() => create a Set
+      // set.add(value) => add a value to the Set
+      // set.delete(value) => delete a value from Set
+      // set.has(value) => checks the existance of the value
+      // set.clear() => removes all the values
+      // set.size => return number of values in the Set
+
+      // Create a Set
+      let set = new Set();
+      console.log(set);
+
+      // Add a value
+      set.add(1);
+      set.add({ name: "John" });
+      set.add(true);
+      set.add(1);
+
+      console.log(set);
+
+      // Get the value
+      // set.keys()
+      // set.values()
+      //   for (const [key, value] of set.entries()) {
+      //     console.log(key, value);
+      //   }
+
+      // delete a value
+      set.delete(1);
+      console.log(set);
+
+      // clear
+      set.clear();
+      console.log(set);
+      console.log(set.size);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Set</h2>
+  </body>
+</html>

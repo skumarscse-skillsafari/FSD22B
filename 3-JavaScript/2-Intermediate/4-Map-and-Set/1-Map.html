@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Map" />
+    <title>JavaScript - Map</title>
+    <script>
+      // Map
+      // Objects => Used for storing keyed collections (key: value)
+      // Arrays => Used for storing ordered collections (index)
+
+      // Map
+      // Looks similar like an Object
+      // Map allows the "keys" of any type
+      // Methods and Properties
+      // let map = new Map() => create a Map
+      // map.set(key, value) => Store the "value" by "key"
+      // map.get(key) => returns the "value" by the "key". "undefined", if "key" not exists
+      // map.has(key) => returns "true", if the "key" exists, else return "false"
+      // map.delete(key) => removes the "value" by the "key"
+      // map.clear() => removes everything from the "map"
+      // map.size => return the size or number of elements in the "map"
+
+      // Object
+      //   let user = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //     isAdmin: true,
+      //   };
+      //   console.log(user);
+
+      // Map
+      // Create a map
+      //   let map = new Map();
+      //   console.log(map);
+
+      //   // Add the elements
+      //   // map.set(key, value)
+      //   map.set("firstName", "John");
+      //   map.set("lastName", "Jack");
+      //   map.set("age", 30);
+      //   map.set("isAdmin", true);
+      //   map.set(1, 20);
+      //   map.set(true, "hello");
+      //   console.log(map);
+
+      //   // Get the element value
+      //   console.log(map.get("isAdmin")); // true
+      //   console.log(map.get("age")); // 30
+      //   console.log(map.get(1)); // 20
+      //   console.log(map.get(false)); // undefined
+
+      //   // Check the element existance
+      //   console.log(map.has("isAdmin")); // true
+      //   console.log(map.has(false)); // false
+
+      //   // delete an element
+      //   map.delete(1);
+      //   map.delete(true);
+      //   console.log(map);
+
+      //   // size
+      //   console.log(map.size); // 4
+
+      //   // clear
+      //   map.clear();
+      //   console.log(map.size);
+      //   console.log(map);
+
+      // Map with object as "key"
+      //   let john = { name: "John" };
+      //   let users = new Map();
+      //   users.set(john, "userJohn");
+      //   console.log(users);
+      //   console.log(users.get(john)); // userJohn
+
+      // Iteration over Map
+      // map.keys() => returns an iterable for "keys"
+      // map.values() => returns an iterable for "values"
+      // map.entries() => returns an iterable for "entries" ["key", "value"], used for...of loop by default
+
+      // let fruits = new Map();
+      // fruits.set("Mango", 80)
+      //   let fruits = new Map([
+      //     ["Mango", 80],
+      //     ["Apple", 100],
+      //     ["Banana", 75],
+      //     ["Orange", 85],
+      //   ]);
+      // console.log(fruits);
+
+      // Iterate keys
+      //   for (const fruit of fruits.keys()) {
+      //     console.log(fruit);
+      //   }
+
+      // Iterate values
+      //   for (const fruitValue of fruits.values()) {
+      //     console.log(fruitValue);
+      //   }
+
+      // Iterate both keys and values
+      //   for (const [fruit, fruitValue] of fruits.entries()) {
+      //     console.log(`${fruit} => ${fruitValue}`);
+      //   }
+
+      // forEach() => iterate Map
+      //   fruits.forEach((fruitValue, fruit) =>
+      //     console.log(`${fruit} => ${fruitValue}`)
+      //   );
+
+      // Object.entries() => Map from Object
+      //   let users = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //     isAdmin: true,
+      //   };
+      //   console.log(users);
+
+      //   let map = new Map(Object.entries(users));
+      //   console.log(map);
+
+      // Object.fromEntries() => Object from Map
+      //   let map = new Map([
+      //     ["firstName", "Jack"],
+      //     ["lastName", "John"],
+      //     ["isAdmin", true],
+      //     ["age", 30],
+      //   ]);
+      //   console.log(map);
+
+      //   let user = Object.fromEntries(map);
+      //   console.log(user);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Map</h2>
+  </body>
+</html>
