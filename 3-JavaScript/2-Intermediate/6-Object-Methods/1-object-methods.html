@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Object Methods" />
+    <title>JavaScript - Object Methods</title>
+    <script>
+      // JavaScript - Object Methods
+      // Object.assign(obj)
+      // Object.keys(obj) - return an array of keys
+      // Object.values(obj) - return an array of values
+      // Object.entries(obj) - return an array [key, value] pairs
+      // Object.fromEntries()
+
+      let user = {
+        id: 10001,
+        name: "John",
+        age: 30,
+        designation: "Full-stack developer",
+        isAdmin: true,
+      };
+      //   console.log(user);
+      //   for (const key in user) {
+      //     console.log(`${key} => ${user[key]}`);
+      //   }
+
+      // Object.keys(obj)
+      //   console.log(Object.keys(user)); // ['id', 'name', 'age', 'designation', 'isAdmin']
+      //   for (const key of Object.keys(user)) {
+      //     console.log(key);
+      //   }
+      // Object.keys(user).forEach((key) => console.log(key));
+
+      // Object.values(obj)
+      // console.log(Object.values(user)); // [10001, 'John', 30, 'Full-stack developer', true]
+      //   for (const value of Object.values(user)) {
+      //     console.log(value);
+      //   }
+      // Object.values(user).forEach((val) => console.log(val));
+
+      // Object.entries(obj)
+      // console.log(Object.entries(user));
+      //   for (const [key, value] of Object.entries(user)) {
+      //     console.log(key, value);
+      //   }
+      // Object.entries(user).forEach((val) => console.log(val[0], val[1]));
+
+      // Transforming objects
+      // Object => can't use methods like find, filter, map
+      // 1. Use Object.entries(obj) to get an array of key/value pair from obj
+      // 2. Use array methods on that array, e.g map, to tranforn the key/value pair
+      // 3. Use Object.fromEntries(arr) on the resulting array to turn it back into an object
+
+      let fruits = {
+        apple: 10,
+        orange: 15,
+        mango: 20,
+      };
+      console.log(fruits);
+      let doubleItems = Object.fromEntries(
+        Object.entries(fruits).map((val) => [val[0], val[1] * 2])
+      );
+      console.log(doubleItems);
+
+      //   console.log(
+      //     Object.fromEntries(
+      //       Object.entries(fruits).map((val) => [val[0], val[1] * 2])
+      //     )
+      //   );
+      //   Object.entries(fruits).forEach((val) => console.log(val[1] * 2));
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Object Methods</h2>
+  </body>
+</html>

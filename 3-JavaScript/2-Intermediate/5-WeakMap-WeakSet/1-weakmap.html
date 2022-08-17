@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - WeakMap" />
+    <title>JavaScript - WeakMap</title>
+    <script>
+      // JavaScript - WeakMap
+      // WeakMap
+      // Works similar like "Map", but the key of the weakMap must be an "Object"
+      // Map => Key can be of any type
+      // WeakMap => Key must be an Object
+
+      // Methods and Properties
+      // let weakMap = new WeakMap() - create a weakmap
+      // weakMap.set(key, value)
+      // weakMap.get(key)
+      // weakMap.delete(key)
+      // weakMap.has(key)
+
+      // Not support: keys(), values(), entries(), size
+
+      // create WeakMap
+      let weakMap = new WeakMap();
+      let john = { id: 1, name: "John" };
+      let jack = { id: 2, name: "Jack" };
+      weakMap.set(john, "johnDetails");
+      weakMap.set(jack, "jackDetails");
+      let testDept = jack;
+      testDept = null;
+      console.log(testDept);
+      console.log(weakMap);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - WeakMap</h2>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - WeakSet" />
+    <title>JavaScript - WeakSet</title>
+    <script>
+      // JavaScript - WeakSet
+      // Set => Store unique collection of value
+      // WeakSet => Store unique collection of value, but the value must be an Object
+
+      // Methods and Properties
+      // let weakSet = new WeakSet()
+      // weakSet.add(value)
+      // weakSet.has(value)
+      // weakSet.delete(value)
+
+      // Not support: size, keys(), values(), entries()
+
+      let visitedSet = new WeakSet();
+      console.log(visitedSet);
+
+      let john = { id: 1, name: "John" };
+      let jack = { id: 2, name: "Jack" };
+      let mary = { id: 3, name: "Mary" };
+
+      visitedSet.add(john);
+      visitedSet.add(jack);
+      visitedSet.add(mary);
+      visitedSet.add(john);
+      visitedSet.add(mary);
+
+      console.log(visitedSet);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - WeakSet</h2>
+  </body>
+</html>
