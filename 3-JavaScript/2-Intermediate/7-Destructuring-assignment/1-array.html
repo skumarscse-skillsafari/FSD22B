@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Destucturing Assignment" />
+    <title>JavaScript - Destucturing Assignment</title>
+    <script>
+      // JavaScript - Destructuring Assignment
+      // Object => create a single entity that stores the data items by key
+      // Array => gather the data items into an ordered list
+
+      // Destructuring assignment is a special syntax that allows us to "unpack" arrays or objects
+      // into a bunch of variables, for easy access.
+
+      // Array Destructuring
+      // Array / Array-like elements / Iterables
+      // Ex-1
+      //   let fruits = ["Apple", "Orange", "Mango"];
+      //   console.log(fruits[0]); // Apple
+      //   console.log(fruits[1]); // Orange
+      //   console.log(fruits[2]); // Mango
+      //   // Syntax
+      //   // let [ varName-1, varName-2, ..., varName-N ] = array
+      //   let [itemOne, itemTwo, itemThree] = fruits; // ["Apple", "Orange", "Mango"]
+      //   console.log(itemOne); // Apple
+      //   console.log(itemTwo); // Orange
+      //   console.log(itemThree); // Mango
+
+      //   // Ex-2
+      //   let [subject1, subject2, subject3] = ["English", "Maths", "Physics"];
+      //   console.log(subject1); // English
+      //   console.log(subject2); // Maths
+      //   console.log(subject3); // Physics
+
+      // Ex-3
+      // Ignore elements using commas
+      //   let arr = ["John", "Jack", 30, "Tester"];
+      //   let [firstName, , age, designation] = arr;
+      //   console.log(firstName);
+      //   console.log(arr[1]);
+      //   console.log(age);
+      //   console.log(designation);
+
+      // Ex-4
+      // Works on any iterable on the right-side
+      //   let str = "abc";
+      //   console.log(str.split("")); // [ 'a', 'b', 'c']
+      //   let [a, b, c] = str;
+      //   console.log(a); // a
+      //   console.log(b); // b
+      //   console.log(c); // c
+
+      // Ex-5
+      // We can destructure any array-like elements
+      //   let str = "This is a string";
+      //   let [word1, word2, word3, word4] = str.split(" "); // [ "This", "is", "a", "string"]
+      //   console.log(word1);
+      //   console.log(word2);
+      //   console.log(word3);
+      //   console.log(word4);
+
+      // Ex-6
+      // Looping with .entries()
+      // Object
+      //   let user = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //   };
+      //   for (const [key, value] of Object.entries(user)) {
+      //     console.log(key, value);
+      //   }
+
+      // Map
+      //   let map = new Map([
+      //     ["firstName", "John"],
+      //     ["lastName", "Jack"],
+      //     ["age", 30],
+      //   ]);
+      //   for (const [key, value] of map.entries()) {
+      //     console.log(key, value);
+      //   }
+
+      // Ex-7
+      // Swap the value
+      //   let firstName = "John";
+      //   let lastName = "Jack";
+      //   [lastName, firstName] = [firstName, lastName];
+      //   console.log(firstName); // Jack
+      //   console.log(lastName); // John
+
+      // The rest - "..."
+      //   let [subject1, subject2] = ["English", "Maths", "Physics", "Chemistry"];
+      //   console.log(subject1); // English
+      //   console.log(subject2); // Maths
+      let [subject1, subject2, ...rest] = [
+        "English",
+        "Maths",
+        "Physics",
+        "Chemistry",
+      ];
+      //   console.log(subject1); // English
+      //   console.log(subject2); // Maths
+      //   console.log(rest); // [ "Physics", "Chemistry"]
+      //   let [subject3, subject4] = rest; // [ "Physics", "Chemistry"]
+      //   console.log(subject3); // Physics
+      //   console.log(subject4); // Chemistry
+
+      //   console.log(rest[0]); // Physics
+      //   console.log(rest[1]); // Chemistry
+
+      // Default values
+      //   let [firstName, lastName] = [];
+      //   console.log(firstName); // undefined
+      //   console.log(lastName); // undefined
+
+      // Assigning default values
+      let [firstName = "John", lastName = "Jack"] = ["Mary"];
+      console.log(firstName); // Mary
+      console.log(lastName); // Jack
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript - Destucturing Assignment</h1>
+  </body>
+</html>

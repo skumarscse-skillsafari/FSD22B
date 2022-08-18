@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Object Destructuring" />
+    <title>JavaScript - Object Destructuring</title>
+    <script>
+      // Javascript - Object Destructuring
+      // Syntax
+      // let { key-1, key-2, ..., key-N } = { key-1: value-1, key-2: value-2, ..., key-N: value-N}
+
+      //   let user = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //   };
+      //   let { firstName, lastName, age } = user; // Key in actual order
+      //   // let { age, firstName, lastName } = user; // Key in different order
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(age);
+
+      // Alias name for Keys
+      // Syntax
+      // let { key-1 : alias-1, key-2: alias-2, ..., key-N: alias-N } = { key-1: value-1, key-2: value-2, ..., key-N: value-N}
+      //   let { firstName: fn, lastName: ln, age: a } = user;
+      //   console.log(fn); // John
+      //   console.log(ln); // Jack
+      //   console.log(a); // 30
+
+      // Add new property using "="
+      //   let fruits = {
+      //     apple: 100,
+      //   };
+      //   let { apple, orange = 80, mango = 90 } = fruits;
+      //   console.log(apple); // 100
+      //   console.log(orange); // 80
+      //   console.log(mango); // 90
+      //   console.log(fruits);
+
+      // Both Alias and "="
+      let fruits = {
+        apple: 100,
+      };
+      let { apple: a, orange: o = 80, mango: m = 90 } = fruits;
+      console.log(a);
+      console.log(o);
+      console.log(m);
+
+      // Accessing only few properties
+      let user = {
+        firstName: "John",
+        lastName: "Jack",
+        age: 30,
+        isAdmin: true,
+        designation: "Developer",
+      };
+      let { firstName, designation } = user;
+      console.log(firstName);
+      console.log(designation);
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Object Destructuring</h2>
+  </body>
+</html>
