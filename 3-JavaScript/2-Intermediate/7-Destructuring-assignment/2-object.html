@@ -41,25 +41,187 @@
       //   console.log(fruits);
 
       // Both Alias and "="
-      let fruits = {
-        apple: 100,
-      };
-      let { apple: a, orange: o = 80, mango: m = 90 } = fruits;
-      console.log(a);
-      console.log(o);
-      console.log(m);
+      // let fruits = {
+      //   apple: 100,
+      // };
+      // let { apple: a, orange: o = 80, mango: m = 90 } = fruits;
+      // console.log(a);
+      // console.log(o);
+      // console.log(m);
 
       // Accessing only few properties
-      let user = {
-        firstName: "John",
-        lastName: "Jack",
-        age: 30,
-        isAdmin: true,
-        designation: "Developer",
-      };
-      let { firstName, designation } = user;
-      console.log(firstName);
-      console.log(designation);
+      // let user = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 30,
+      //   isAdmin: true,
+      //   designation: "Developer",
+      // };
+      // let { firstName, designation } = user;
+      // console.log(firstName);
+      // console.log(designation);
+
+      // ...rest in objects
+      // let user = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 30,
+      //   isAdmin: true,
+      //   designation: "Developer",
+      // };
+      // let { firstName, lastName, ...rest } = user;
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(rest);
+      // let { age, isAdmin, designation } = rest;
+      // console.log(age);
+      // console.log(isAdmin);
+      // console.log(designation);
+
+      // console.log(rest.age);
+      // console.log(rest.isAdmin);
+      // console.log(rest.designation);
+
+      // Ex: Usage of '(' and ')'
+      // let firstName, lastName, age;
+      // ({ firstName, lastName, age } = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 30,
+      // });
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+
+      // Nested destructuring
+      // let user = {
+      //   name: {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //   },
+      //   hobbies: ["Cricket", "Football", "Swimming"],
+      //   isAdmin: true,
+      // };
+      // let {
+      //   name: { firstName, lastName },
+      //   hobbies: [item1, item2, item3],
+      //   isAdmin,
+      // } = user;
+      // console.log(firstName); // John
+      // console.log(lastName); // Jack
+      // console.log(item1); // Cricket
+      // console.log(item2); // Football
+      // console.log(item3); // Swimming
+      // console.log(isAdmin); // true
+
+      // Smart function parameters
+      // Ex: 1
+      // let user = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 30,
+      // };
+      // // let { firstName, lastName, age } = user;
+
+      // function userDetails({ firstName, lastName, age }) {
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(age);
+      // }
+      // userDetails(user); // firstName, lastName, age
+
+      // Ex: 2
+      // let user = {
+      //   name: {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //   },
+      //   hobbies: ["Cricket", "Football", "Swimming"],
+      //   isAdmin: true,
+      // };
+
+      // let {
+      //   name: { firstName, lastName },
+      //   hobbies: [item1, item2, item3],
+      //   isAdmin,
+      // } = user;
+
+      // function userDetails({
+      //   name: { firstName, lastName },
+      //   hobbies: [item1, item2, item3],
+      //   isAdmin,
+      // }) {
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(item1);
+      //   console.log(item2);
+      //   console.log(item3);
+      //   console.log(isAdmin);
+      // }
+
+      // userDetails(user);
+
+      // Ex: 3 (Alias Key)
+      // let fruits = {
+      //   apple: 100,
+      //   orange: 90,
+      //   mango: 80,
+      // };
+
+      // function displayFruits({ apple: a, orange: o, mango: m }) {
+      //   console.log(a);
+      //   console.log(o);
+      //   console.log(m);
+      // }
+      // displayFruits(fruits);
+
+      // Ex: 4 (Alias Key ans "=")
+      // let fruits = {
+      //   apple: 100,
+      //   orange: 90,
+      //   mango: 80,
+      // };
+
+      // function displayFruits({
+      //   apple: a,
+      //   orange: o,
+      //   mango: m,
+      //   pineapple: p = 85,
+      // }) {
+      //   console.log(a);
+      //   console.log(o);
+      //   console.log(m);
+      //   console.log(p);
+      // }
+      // displayFruits(fruits);
+
+      // Ex: 5 (rest)
+      // let fruits = {
+      //   apple: 100,
+      //   orange: 90,
+      //   mango: 80,
+      // };
+
+      // function displayFruits({ apple: a, ...rest }) {
+      //   console.log(a);
+      //   console.log(rest);
+      //   console.log(rest.orange);
+      //   console.log(rest.mango);
+      // }
+      // displayFruits(fruits);
+
+      // Ex: 6
+      function displayUser({
+        firstName = "John",
+        lastName = "Jack",
+        age = 30,
+      }) {
+        console.log(firstName);
+        console.log(lastName);
+        console.log(age);
+      }
+      displayUser({});
+      // let { firstName = "John", lastName= "Jack", age = 30} = {}
     </script>
   </head>
   <body>

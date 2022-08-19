@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Spread Usecase" />
+    <title>JavaScript - Spread Usecase</title>
+    <script>
+      // JavaScript - Spread Usecase
+      // Spread in Array Literal
+      const user1 = ["Jack", 30, "true"];
+      const user2 = ["John", "Tester", ...user1];
+      console.log(user2);
+
+      // String to Array of characters
+      let message = "Hello, World!!!";
+      console.log([...message]);
+
+      // Spread in function
+      const num = [1, 2, 3, 4];
+      function addNumbers(a, b, c, d) {
+        // a = "1,2,3,4" b = undefined c = undefined d = undefined
+        return a + b + c + d; // 1,2,3,4undefinedundefinedundefined
+      }
+      console.log(...num); // 1 2 3 4
+      console.log(addNumbers(...num)); // [1, 2, 3, 4]
+
+      // Makes the element as an iterable elements
+    </script>
+  </head>
+  <body>
+    <h2>JavaScript - Spread Usecase</h2>
+  </body>
+</html>
