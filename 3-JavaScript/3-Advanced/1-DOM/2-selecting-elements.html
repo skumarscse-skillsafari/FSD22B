@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selecting elements in the DOM" />
+    <title>Selecting the elements in the DOM</title>
+  </head>
+  <body>
+    <h2>Selecting DOM elements</h2>
+    <!-- // How to select the elements in the DOM
+      // Select element by ID - getElementById('id') - return HTML Element
+      // document.getElementById("id")
+
+      // Select elements by Class Name - getElementsByClassName('className')
+      // document.getElementsByClassName("className") - return HTMLCollectionOf<Element>
+
+      // Select elements by Tag Name - getElementsByTagName('tagName')
+
+      // Select the elements by CSS selectors
+      // querySelector('css selector')
+      // querySelectorAll('css selector') -->
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, sed.
+    </p>
+
+    <a href="http://www.skillsafari.in" id="link" target="_blank">Click</a>
+
+    <!-- let a = {
+        defaultKey: defaultValue,
+        .
+        .
+        .
+        href: "http://www.skillsafari.in",
+        id: "link",
+        target: "_blank"
+    } -->
+
+    <ul>
+      <li class="nav-items">Home</li>
+      <li class="nav-items">About</li>
+      <li class="nav-items">Skills</li>
+      <li class="nav-items">Portfolio</li>
+      <li class="nav-items">Contact</li>
+    </ul>
+
+    <script>
+      // Select element by ID - getElementById('id') - return HTML Element
+      // document.getElementById("id")
+      //   const paraEle = document.getElementById("para");
+      //   console.log(paraEle);
+
+      //   const link = document.getElementById("link");
+      //   console.log(link);
+
+      // Select elements by className
+      const navItems = document.getElementsByClassName("nav-items");
+      // Convert HTML Collection to Array-like elements
+      // Array.from(HTML Collection) => Array-like shadow elements
+      console.log(navItems);
+      const arrayFrom = Array.from(navItems);
+      const navText = arrayFrom.map((navItem) => navItem.innerHTML);
+      console.log(navText);
+    </script>
+  </body>
+</html>
