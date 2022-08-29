@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Traversing" />
+    <title>DOM - Traversing</title>
+  </head>
+  <body>
+    <h2>DOM - Traversing</h2>
+
+    <div id="parent">
+      <div id="firstChild">Element - 1</div>
+      <div id="secondChild">Element - 2</div>
+      <div>Element - 3</div>
+      <div id="lastChild">Element - 4</div>
+    </div>
+
+    <script>
+      // DOM Traversing
+      // 1. parentElement
+      // 2. children / childrenNodes
+      // 3. firstElementChild
+      // 4. lastElementChild
+      // 5. nextElementSibling
+      // 6. previousElementSibling
+
+      const element = document.querySelector("#parent");
+      console.log(element.children); // HTMLCollection(4)
+      console.log(element.firstElementChild); // <div id="firstChild">Element - 1</div>
+      console.log(element.lastElementChild); // <div id="lastChild">Element - 4</div>
+
+      // Travesing from child to parent
+      console.log(document.querySelector("#lastChild").parentElement);
+
+      // Selecting => Element - 3
+      console.log(document.querySelector("#secondChild").nextElementSibling);
+      console.log(document.querySelector("#parent").children[2]); // <div>Element - 3</div>
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Manipulation" />
+    <title>DOM - Manipulation</title>
+  </head>
+  <body>
+    <h2>DOM - Manipulation</h2>
+
+    <div id="parent"></div>
+
+    <ul id="list">
+      <li>Home</li>
+      <!-- <li>About</li> -->
+      <li id="services">Services</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      // DOM - Manipulation
+      // 1. Creating a new Elememt
+      // 2. Modifying innerHTML content
+      // 3. Append a new Element
+      // 4. Inserting new Element before another
+      // 5. Replace a child element
+      // 6. Remove a child element
+
+      // Create new Element
+      // document.createElement()
+      // Created '<p></p>' element
+      let para = document.createElement("p");
+      // Added innerHTML content
+      para.innerHTML = "This is a paragraph";
+      // Added "id" attribute
+      para.id = "para";
+      // Add "class" attribute
+      para.className = "para-class";
+      console.log(para);
+
+      // Append a child Element
+      // parentElement.appendChild(childElement)
+
+      const parent = document.querySelector("#parent");
+      console.log(parent);
+      parent.appendChild(para);
+
+      // Insert one Element before another as newChild
+      // insertBefore()
+      // parentElement.insertBefore(newElement, existingElement)
+      let about = document.createElement("li");
+      about.innerHTML = "About";
+
+      let list = document.querySelector("#list");
+
+      let services = document.querySelector("#services");
+
+      list.insertBefore(about, services);
+    </script>
+  </body>
+</html>

@@ -21,11 +21,11 @@
       // Select the elements by CSS selectors
       // querySelector('css selector')
       // querySelectorAll('css selector') -->
-    <p id="para">
+    <!-- <p id="para">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, sed.
     </p>
 
-    <a href="http://www.skillsafari.in" id="link" target="_blank">Click</a>
+    <a href="http://www.skillsafari.in" id="link" target="_blank">Click</a> -->
 
     <!-- let a = {
         defaultKey: defaultValue,
@@ -36,6 +36,25 @@
         id: "link",
         target: "_blank"
     } -->
+
+    <!-- <ul>
+      <li class="nav-items">Home</li>
+      <li class="nav-items">About</li>
+      <li class="nav-items">Skills</li>
+      <li class="nav-items">Portfolio</li>
+      <li class="nav-items">Contact</li>
+    </ul> -->
+
+    <!-- <h1>Heading</h1>
+    <h1>This is another heading</h1>
+    <p>This is a paragraph</p>
+    <p>This is another paragraph</p> -->
+
+    <!-- <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
+      veritatis nesciunt optio at qui sed fugit minima quas velit nulla neque
+      fuga pariatur ad, quisquam illo rem necessitatibus provident laudantium?
+    </p> -->
 
     <ul>
       <li class="nav-items">Home</li>
@@ -55,13 +74,29 @@
       //   console.log(link);
 
       // Select elements by className
-      const navItems = document.getElementsByClassName("nav-items");
-      // Convert HTML Collection to Array-like elements
-      // Array.from(HTML Collection) => Array-like shadow elements
-      console.log(navItems);
-      const arrayFrom = Array.from(navItems);
-      const navText = arrayFrom.map((navItem) => navItem.innerHTML);
-      console.log(navText);
+      // const navItems = document.getElementsByClassName("nav-items");
+      // // Convert HTML Collection to Array-like elements
+      // // Array.from(HTML Collection) => Array-like shadow elements
+      // console.log(navItems);
+      // const arrayFrom = Array.from(navItems);
+      // const navText = arrayFrom.map((navItem) => navItem.innerHTML);
+      // console.log(navText);
+
+      // Select DOM elements by TagName
+      // document.getElementsByTagName('tag') // return HTML Collection of HTML elements
+      // const h1Elements = document.getElementsByTagName("h1");
+      // h1Elements[1].innerHTML = "Modified Heading";
+      // console.log(h1Elements[1]);
+
+      // Select DOM elements with CSS selectors
+      // 1. document.querySelector('cssSelector')
+
+      // const para = document.querySelector("#para");
+      // console.log(para);
+
+      // 2. document.querySelectorAll("cssSelector") // return NodeList of elements
+      const list = document.querySelectorAll(".nav-items");
+      console.log(list);
     </script>
   </body>
 </html>
