@@ -31,33 +31,55 @@
       // Create new Element
       // document.createElement()
       // Created '<p></p>' element
-      let para = document.createElement("p");
-      // Added innerHTML content
-      para.innerHTML = "This is a paragraph";
-      // Added "id" attribute
-      para.id = "para";
-      // Add "class" attribute
-      para.className = "para-class";
-      console.log(para);
+      // let para = document.createElement("p");
+      // // Added innerHTML content
+      // para.innerHTML = "This is a paragraph";
+      // // Added "id" attribute
+      // para.id = "para";
+      // // Add "class" attribute
+      // para.className = "para-class";
+      // console.log(para);
 
-      // Append a child Element
-      // parentElement.appendChild(childElement)
+      // // Append a child Element
+      // // parentElement.appendChild(childElement)
 
-      const parent = document.querySelector("#parent");
-      console.log(parent);
-      parent.appendChild(para);
+      // const parent = document.querySelector("#parent");
+      // console.log(parent);
+      // parent.appendChild(para);
 
       // Insert one Element before another as newChild
       // insertBefore()
       // parentElement.insertBefore(newElement, existingElement)
-      let about = document.createElement("li");
-      about.innerHTML = "About";
+      // let about = document.createElement("li");
+      // about.innerHTML = "About";
 
-      let list = document.querySelector("#list");
+      // let list = document.querySelector("#list");
 
-      let services = document.querySelector("#services");
+      // let services = document.querySelector("#services");
 
-      list.insertBefore(about, services);
+      // list.insertBefore(about, services);
+
+      // Replace a child element
+      // parentElement.replaceChild(newElement, existingElement)
+      // Replace the Services element into Products
+      // const products = document.createElement("li");
+      // products.innerHTML = "Products";
+      // products.id = "products";
+      // console.log(products);
+
+      // const services = document.querySelector("#services");
+
+      // const parentList = document.querySelector("#list");
+
+      // parentList.replaceChild(products, services);
+
+      // Remove child element
+      // parentElement.removeChild(elementTobeRemoved)
+
+      const parentList = document.querySelector("#list");
+      const services = document.querySelector("#services");
+
+      parentList.removeChild(services);
     </script>
   </body>
 </html>

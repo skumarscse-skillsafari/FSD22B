@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Add Styling with CSS" />
+    <title>DOM - Add Styling with CSS</title>
+    <style>
+      .btn-style {
+        background-color: crimson;
+        width: 200px;
+        border: none;
+        font-size: 2rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>DOM - Add Styling with CSS</h2>
+    <button id="btn">Click Me</button>
+
+    <script>
+      // DOM - Add Styling with CSS
+      // Adding style to the element
+      // EventHandling
+
+      // Select the button
+      const btnID = document.querySelector("#btn");
+      console.log(btnID);
+      // btnID.className = "btn-style";
+
+      // Events => action which we can apply on the webpage. MouseClick, MouseOver, KeyPress, ScrollUp/ScrollDown
+      // EventListeners
+      // Syntax
+      // element.addEventListener('eventType', callbackFun)
+      // eventType => click, change, keypress
+      btnID.addEventListener("click", addStyle);
+      function addStyle() {
+        btnID.className = "btn-style";
+      }
+    </script>
+  </body>
+</html>
