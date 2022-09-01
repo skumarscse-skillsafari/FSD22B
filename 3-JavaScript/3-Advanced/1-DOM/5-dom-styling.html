@@ -20,7 +20,8 @@
   </head>
   <body>
     <h2>DOM - Add Styling with CSS</h2>
-    <button id="btn">Click Me</button>
+    <button id="btn-add">Add Style</button>
+    <button id="btn-remove">Remove Style</button>
 
     <script>
       // DOM - Add Styling with CSS
@@ -28,8 +29,9 @@
       // EventHandling
 
       // Select the button
-      const btnID = document.querySelector("#btn");
-      console.log(btnID);
+      const btnAdd = document.querySelector("#btn-add");
+      console.log(btnAdd);
+      const btnRemove = document.querySelector("#btn-remove");
       // btnID.className = "btn-style";
 
       // Events => action which we can apply on the webpage. MouseClick, MouseOver, KeyPress, ScrollUp/ScrollDown
@@ -37,10 +39,23 @@
       // Syntax
       // element.addEventListener('eventType', callbackFun)
       // eventType => click, change, keypress
-      btnID.addEventListener("click", addStyle);
-      function addStyle() {
-        btnID.className = "btn-style";
-      }
+      // btnAdd.addEventListener("click", addStyle);
+      // function addStyle() {
+      //   // btnAdd.className = "btn-style";
+      //   // adding className using classList
+      //   // element.classList.add('className')
+      //   btnAdd.classList.add("btn-style");
+      // }
+
+      // btnRemove.addEventListener("click", removeStyle);
+      // function removeStyle() {
+      //   // element.classList.remove('className')
+      //   btnAdd.classList.remove("btn-style");
+      // }
+
+      btnAdd.addEventListener("click", () => {
+        btnAdd.classList.toggle("btn-style");
+      });
     </script>
   </body>
 </html>

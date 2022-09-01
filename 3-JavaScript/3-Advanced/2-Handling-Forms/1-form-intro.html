@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling Form Elements" />
+    <title>DOM - Handling Form Elements</title>
+  </head>
+  <body>
+    <h2>DOM - Handling Form Elements</h2>
+    <form action="#" method="post" id="form">
+      <input type="text" name="first-name" id="firstName" />
+      <input type="email" name="email" id="email" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      // DOM - Handling Form Elements
+      // document.forms => return HTMLCollection with form elements
+      // form.addEventListener('submit', (e) => {
+      // e.preventDefault();
+      // })
+
+      const form = document.getElementById("form");
+      console.log(form);
+
+      form.addEventListener("submit", (e) => {
+        console.log(e);
+        e.preventDefault();
+      });
+
+      // Accessing form elements
+      // const form = document.getElementById('form')
+      // form.elements[index]
+      // form.elements['nameAttribute']
+      // form.elemets['IDAttribute']
+
+      console.log(form.elements); // return HTMLFormControlsCollection
+      console.log(form.elements[2]); // using Index
+      console.log(form.elements["first-name"]); // using name attribute value
+      console.log(form.elements["firstName"]); // using Id attribute value
+
+      // Accessing the 'value' in the form fields
+      const firstName = form.elements["first-name"];
+      const email = form.elements["email"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(firstName.value);
+        console.log(email.value);
+      });
+    </script>
+  </body>
+</html>
