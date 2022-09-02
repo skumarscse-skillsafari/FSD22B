@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling Radio Buttons" />
+    <title>DOM - Handling Radio Buttons</title>
+  </head>
+  <body>
+    <h2>DOM - Handling Radio Buttons</h2>
+    <p>Select your favourite colour</p>
+    <form action="#" method="post" id="form">
+      <div>
+        <input type="radio" name="colour" id="red" value="Red" />
+        <label for="red">Red</label>
+      </div>
+
+      <div>
+        <input type="radio" name="colour" id="green" value="Green" />
+        <label for="green">Green</label>
+      </div>
+
+      <div>
+        <input type="radio" name="colour" id="blue" value="Blue" />
+        <label for="blue">Blue</label>
+      </div>
+
+      <div>
+        <input type="radio" name="colour" id="orange" value="Orange" />
+        <label for="orange">Orange</label>
+      </div>
+
+      <div>
+        <input type="radio" name="colour" id="yellow" value="Yellow" />
+        <label for="yellow">Yellow</label>
+      </div>
+      <p>
+        <button id="btn">Show selected color</button>
+      </p>
+    </form>
+    <p id="output"></p>
+
+    <script>
+      // DOM - Handling Radio Buttons
+
+      const btn = document.querySelector("#btn");
+      const output = document.querySelector("#output");
+      const radioButtons = document.querySelectorAll("input[name='colour']");
+      console.log(radioButtons);
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let selectedColour;
+        for (const radioButton of radioButtons) {
+          if (radioButton.checked) {
+            selectedColour = radioButton.value;
+            break;
+          }
+        }
+        output.innerHTML = selectedColour
+          ? `You selected: ${selectedColour}`
+          : `You have not selected any colour`;
+      });
+    </script>
+  </body>
+</html>
