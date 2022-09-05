@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Dynamic CheckBox" />
+    <title>DOM - Dynamic CheckBox</title>
+  </head>
+  <body>
+    <h2>DOM - Dynamic CheckBox</h2>
+    <p>Select your favourite fruit(s)</p>
+    <form action="#" method="post" id="form"></form>
+    <p id="output"></p>
+
+    <script>
+      // DOM - Dynamic CheckBox
+      const fruits = ["Apple", "Orange", "Mango", "Banana"];
+
+      // Create checkbox
+      const form = document.querySelector("#form");
+      form.innerHTML = fruits
+        .map(
+          (fruit) => `
+        <div>
+            <label for=${fruit}>
+                <input type="checkbox" id=${fruit} value=${fruit}>${fruit}
+            </label>
+        </div>
+      `
+        )
+        .join(" ");
+
+      let btn = document.createElement("button");
+      btn.textContent = "Show Selected Fruit(s)";
+      btn.id = "btn";
+      console.log(btn);
+      form.appendChild(btn);
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const checkBoxes = Array.from(
+          document.querySelectorAll("input[type='checkbox']:checked")
+        );
+        let selectedFruits = checkBoxes
+          .map((checkBox) => {
+            return checkBox.value;
+          })
+          .join(" ");
+        document.querySelector("#output").innerHTML = selectedFruits
+          ? `The selected fruit(s): ${selectedFruits}`
+          : `No Fruits selected`;
+      });
+    </script>
+  </body>
+</html>

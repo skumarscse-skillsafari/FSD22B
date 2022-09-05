@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling CheckBox" />
+    <title>DOM - Handling CheckBox</title>
+  </head>
+  <body>
+    <h2>DOM - Handling CheckBox</h2>
+    <p>Select your favourite subject(s)</p>
+    <form action="#" method="post" id="form">
+      <div>
+        <label for="english">
+          <input
+            type="checkbox"
+            name="subjects"
+            id="english"
+            value="English"
+          />English
+        </label>
+      </div>
+      <div>
+        <label for="maths">
+          <input
+            type="checkbox"
+            name="subjects"
+            id="maths"
+            value="Maths"
+          />Maths
+        </label>
+      </div>
+      <div>
+        <label for="physics">
+          <input
+            type="checkbox"
+            name="subjects"
+            id="physics"
+            value="Physics"
+          />Physics
+        </label>
+      </div>
+      <div>
+        <label for="chemistry">
+          <input
+            type="checkbox"
+            name="subjects"
+            id="chemistry"
+            value="Chemistry"
+          />Chemistry
+        </label>
+      </div>
+      <div>
+        <label for="computer">
+          <input
+            type="checkbox"
+            name="subjects"
+            id="computer"
+            value="Computer"
+          />Computer
+        </label>
+      </div>
+      <div>
+        <button id="btn">Selected Subject(s)</button>
+      </div>
+    </form>
+    <script>
+      // DOM - Handling CheckBox
+
+      const btn = document.querySelector("#btn");
+      //   btn.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     const checkBoxes = document.querySelectorAll(
+      //       "input[type='checkbox']:checked"
+      //     );
+      //     let selectedSubjects = [];
+      //     // console.log(checkBoxes);
+      //     // NodeList can be iterated by using "forEach()", map(), find(), filter()... are not supported
+      //     checkBoxes.forEach((checkBox) => {
+      //       selectedSubjects.push(checkBox.value);
+      //     });
+      //     console.log(selectedSubjects);
+      //   });
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const checkBoxes = Array.from(
+          document.querySelectorAll("input[type='checkbox']:checked")
+        );
+        let selectedSubjects = checkBoxes
+          .map((checkBox) => {
+            return checkBox.value;
+          })
+          .join(" ");
+        console.log(
+          selectedSubjects
+            ? `The selected subject(s): ${selectedSubjects}`
+            : `No subjects selected`
+        );
+      });
+    </script>
+  </body>
+</html>
