@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="DOM - Handling Select Element - Multiple"
+    />
+    <title>DOM - Handling Select Element - Multiple</title>
+  </head>
+  <body>
+    <h2>DOM - Handling Select Element - Multiple</h2>
+    <p>Select your favourite subject(s)</p>
+    <form action="#" method="post" id="form">
+      <select name="subjects" id="subjects" multiple>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Computer">Computer</option>
+      </select>
+      <div>
+        <button id="btn">Get selected option</button>
+      </div>
+    </form>
+    <p id="output"></p>
+
+    <script>
+      // DOM - Handling Select Element - Multiple
+      const selectSubjects = document.querySelector("#subjects");
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selectSubjectsArray = Array.from(selectSubjects.options);
+        // console.log(selectSubjectsArray);
+        const selectedSubjects = selectSubjectsArray
+          .filter((elem) => elem.selected)
+          .map((val) => val.value)
+          .join(" ");
+        document.querySelector("#output").innerHTML = selectedSubjects
+          ? `The selected subjects: ${selectedSubjects}`
+          : `No subjects selected`;
+        // console.log(selectedSubjects);
+      });
+    </script>
+  </body>
+</html>

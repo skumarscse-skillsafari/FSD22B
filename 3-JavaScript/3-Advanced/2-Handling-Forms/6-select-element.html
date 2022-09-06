@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling Select Element" />
+    <title>DOM - Handling Select Element</title>
+  </head>
+  <body>
+    <h2>DOM - Handling Select Element</h2>
+    <p>Select your favourite subject(s)</p>
+    <form action="#" method="post" id="form">
+      <select name="subjects" id="subjects">
+        <option value="">Select subject(s)</option>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="Computer">Computer</option>
+      </select>
+      <button id="btn">Get selected option</button>
+    </form>
+
+    <script>
+      // DOM - Handling Select Element
+      // HTMLSelectElement
+      // selectedIndex => default => -1 => option selected by the user
+      // value
+      // multiple => boolean => true/false
+
+      // selectedIndex and value property
+      const selectSubjects = document.querySelector("#subjects");
+      const btn = document.querySelector("#btn");
+      //   btn.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     // console.log(selectSubjects.selectedIndex);
+      //     // value
+      //     // console.log(selectSubjects.value);
+      //     console.log(
+      //       `The selected subject is ${selectSubjects.value} in option: ${
+      //         selectSubjects.selectedIndex + 1
+      //       }`
+      //     );
+      //   });
+
+      // HTMLOptionElement type
+      // index => return index of the option
+      // selected => return true/false
+      // text => return the option's text
+      // value => returns the HTML value attribute
+      // Syntax
+      // selectElement.options
+      console.log(selectSubjects.options); // HTMLOptionsCollection
+      console.log(selectSubjects.options[0].text); // <option value="English">English</option>
+      console.log(selectSubjects.options[2].value); // <option value="Physics">Physics</option>
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selectedSubject =
+          selectSubjects.options[selectSubjects.selectedIndex];
+        console.log(selectedSubject.value);
+      });
+    </script>
+  </body>
+</html>
