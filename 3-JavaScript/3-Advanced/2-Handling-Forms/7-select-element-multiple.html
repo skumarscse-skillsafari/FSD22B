@@ -39,7 +39,7 @@
         const selectedSubjects = selectSubjectsArray
           .filter((elem) => elem.selected)
           .map((val) => val.value)
-          .join(" ");
+          .join(", ");
         document.querySelector("#output").innerHTML = selectedSubjects
           ? `The selected subjects: ${selectedSubjects}`
           : `No subjects selected`;

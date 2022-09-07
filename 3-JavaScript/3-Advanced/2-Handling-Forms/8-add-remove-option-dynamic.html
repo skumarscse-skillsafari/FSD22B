@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Dynamic add/remove options" />
+    <title>DOM - Dynamic add/remove options</title>
+  </head>
+  <body>
+    <h2>DOM - Dynamic add/remove options</h2>
+    <!-- <select name="subjects" id="subjects">
+      <option value="Maths">Maths</option>
+      <option value="Computer">Computer</option>
+    </select> -->
+    <form action="#" method="post" id="form">
+      <label for="subject">Enter Subject name:</label>
+      <input type="text" name="subject" id="subject" />
+      <button id="btnAdd">Add</button>
+      <hr />
+      <label for="subject-list">Subjects List:</label>
+      <div>
+        <select name="subject-list" id="subject-list" multiple></select>
+      </div>
+      <button id="btnRemove">Remove</button>
+    </form>
+
+    <script>
+      // DOM - Dynamic add/remove options
+      // 2 methods
+      // HTMLSelectElement
+      // selectElement.add(newOption, existingOption) => add a new <option> element to the <select> before an existingOption
+      // selectElement.remove(index) =>removes an option specified by the index from a <select>
+
+      // Add options
+      // 1. Creating a new option
+      // 2. Add the option to the select element
+
+      // Method: 1
+      // Create a new option using Option constructor and add the new option using add()
+      // Syntax
+      // let newOption = new Option("optionText", "optionValue")
+      //   let newOption = new Option("English", "English");
+      //   console.log(newOption);
+      //   let subjects = document.querySelector("#subjects");
+      //   // subjects.add(newOption, undefined); // add newOption at the end of existing options
+      //   subjects.add(newOption, subjects.lastElementChild);
+
+      // using DOM method: createElement()
+      //   let createOption = document.createElement("option");
+      //   createOption.textContent = "English";
+      //   createOption.value = "English";
+      //   console.log(createOption);
+      // subjects.appendChild(createOption);
+
+      // remove existing options
+      // subjects.remove(0); // removes first option in the <select>
+      const btnAdd = document.querySelector("#btnAdd");
+      const btnRemove = document.querySelector("#btnRemove");
+      const subject = document.querySelector("#subject");
+      const subjectList = document.querySelector("#subject-list");
+
+      btnAdd.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (subject.value === "") {
+          alert("Please enter the subject name");
+          return;
+        }
+        const option = new Option(subject.value, subject.value);
+        subjectList.add(option, undefined);
+        subject.value = "";
+        subject.focus();
+      });
+
+      btnRemove.addEventListener("click", (e) => {
+        e.preventDefault();
+        let selected = [];
+        for (let i = 0; i < subjectList.length; i++) {
+          selected[i] = subjectList.options[i].selected;
+        }
+        // console.log(selected);
+        let index = subjectList.options.length; // 3 [0, 1, 2]
+        while (index--) {
+          if (selected[index]) {
+            subjectList.remove(index);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
