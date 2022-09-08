@@ -12,9 +12,126 @@
   </head>
   <body>
     <h2>DOM - Handling Form Elements</h2>
+    <form action="#" method="post" id="form">
+      <div>
+        <label>Username:</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <hr />
+      <div class="radio-subjects">
+        <input type="radio" name="radio-subjects" id="english" />
+        <label for="english">English</label>
+        <input type="radio" name="radio-subjects" id="maths" />
+        <label for="maths">Maths</label>
+        <input type="radio" name="radio-subjects" id="physics" />
+        <label for="physics">Physics</label>
+        <input type="radio" name="radio-subjects" id="chemistry" />
+        <label for="chemistry">Chemistry</label>
+      </div>
+      <hr />
+      <div class="check-subjects">
+        <input type="checkbox" name="english" id="check-english" />
+        <label for="english">English</label>
+        <input type="checkbox" name="maths" id="check-maths" />
+        <label for="maths">Maths</label>
+        <input type="checkbox" name="physics" id="check-physics" />
+        <label for="physics">Physics</label>
+        <input type="checkbox" name="chemistry" id="check-chemistry" />
+        <label for="chemistry">Chemistry</label>
+      </div>
+      <hr />
+      <div class="select">
+        <select name="select-subjects" id="select-subjects">
+          <option value="">Select subject</option>
+          <option value="English">English</option>
+          <option value="Maths">Maths</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+        </select>
+      </div>
+      <hr />
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+    <hr />
+    <p id="output"></p>
 
     <script>
       // DOM - Handling Form Elements
+      // Input, Checkbox, RadioButton and Select - change event
+
+      // Handling input type of "text"
+      // const inputText = document.querySelector("#username");
+      // let output = document.querySelector("#output");
+      // inputText.addEventListener("change", function (e) {
+      //   e.preventDefault();
+      //   output.textContent = this.value;
+      // });
+
+      // Handling RadioButton
+      // let output = document.querySelector("#output");
+      // let radioSubjects = document.querySelector(".radio-subjects");
+      // radioSubjects.addEventListener("change", function (e) {
+      //   e.preventDefault();
+      //   // console.log(e.target);
+      //   let target = e.target;
+      //   console.log(target.id);
+      //   let message;
+      //   switch (target.id) {
+      //     case "english":
+      //       message = "You selected English";
+      //       break;
+
+      //     case "maths":
+      //       message = "You selected Maths";
+      //       break;
+
+      //     case "physics":
+      //       message = "You selected Physics";
+      //       break;
+
+      //     case "chemistry":
+      //       message = "You selected Chemistry";
+      //       break;
+      //   }
+      //   output.textContent = message;
+      // });
+
+      // Handling checkbox
+      // const output = document.querySelector("#output");
+      // const checkSubjects = document.querySelector(".check-subjects");
+      // checkSubjects.addEventListener("change", function (e) {
+      //   e.preventDefault();
+      //   let target = e.target;
+      //   let message;
+      //   switch (target.id) {
+      //     case "check-english":
+      //       message = "You Selected English";
+      //       break;
+
+      //     case "check-maths":
+      //       message = "You Selected Maths";
+      //       break;
+
+      //     case "check-physics":
+      //       message = "You Selected Physics";
+      //       break;
+
+      //     case "check-chemistry":
+      //       message = "You Selected Chemistry";
+      //       break;
+      //   }
+      //   output.textContent = message;
+      // });
+
+      // Handling Select
+      const output = document.querySelector("#output");
+      const selectSubjects = document.querySelector("#select-subjects");
+      selectSubjects.addEventListener("change", function (e) {
+        e.preventDefault();
+        output.textContent = this.value;
+      });
     </script>
   </body>
 </html>
