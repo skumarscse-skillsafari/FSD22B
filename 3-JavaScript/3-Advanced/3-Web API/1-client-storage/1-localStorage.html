@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web API - LocalStorage" />
+    <title>Web API - LocalStorage</title>
+  </head>
+  <body>
+    <h2>Web API - LocalStorage</h2>
+    <form action="#" method="post">
+      <div>
+        <label>First Name:</label>
+        <input type="text" name="first-name" id="first-name" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" name="last-name" id="last-name" />
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <button id="btn">Submit</button>
+      </div>
+    </form>
+    <div id="output"></div>
+    <script>
+      // Web API - LocalStorage
+      // Storage type as object
+      // window.localStorage return Storage object
+      // localStorage return Storage object
+      // Store upto 5MB of data
+      // localStorage data can be stored based on URL
+      // Methods
+      // setItem(name/key, value)
+      // removeItem(name/key)
+      // getItem(name/key)
+      // key(index)
+      // clear()
+      // length
+
+      // Access the localStorage
+      // window.localStorage
+      // localStorage
+      // console.log(window.localStorage);
+      // console.log(localStorage);
+
+      // Add item using setItem() with key and value
+      //   localStorage.setItem("name", "John");
+      //   localStorage.setItem("age", 25);
+      //   localStorage.setItem("designation", "Tester");
+      //   localStorage.setItem("city", "Chennai");
+      //   console.log(localStorage);
+      //   console.log(localStorage.length);
+
+      // Get items using getItem() with key
+      //   console.log(localStorage.getItem("age")); // 25
+      //   console.log(localStorage.getItem("designation")); // Tester
+
+      // Remove item using removeItem() with key
+      //   localStorage.removeItem("city");
+      //   console.log(localStorage);
+
+      // Iterate the localStorage items
+      //   console.log(localStorage);
+      //   let keys = Object.keys(localStorage);
+      //   console.log(keys);
+      //   for (let key of keys) {
+      //     console.log(`${key} : ${localStorage.getItem(key)}`);
+      //   }
+
+      // Storing objects as values
+      //   const userDetails = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //     designation: "Full-stack Developer",
+      //     city: "Bangalore",
+      //   };
+      // localStorage "values" must be a type of "String"
+      // Object to String
+      // JSON.stringify(obj) => string
+      //   console.log(userDetails);
+      //   let userDetailsString = JSON.stringify(userDetails);
+      //   console.log(userDetailsString);
+      //   localStorage.setItem("userDetails", userDetailsString);
+
+      //   // String to Object
+      //   // JSON.parse(string) => object
+      //   console.log(JSON.parse(localStorage.getItem("userDetails")));
+
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        let firstName = document.querySelector("#first-name").value;
+        let lastName = document.querySelector("#last-name").value;
+        let email = document.querySelector("#email").value;
+        let userDetails = {
+          firstName,
+          lastName,
+          email,
+        };
+        console.log(userDetails);
+        localStorage.setItem("userDetails", JSON.stringify(userDetails));
+        let output = document.querySelector("#output");
+        // output.textContent = localStorage.getItem("userDetails");
+        let userDetailsObject = JSON.parse(localStorage.getItem("userDetails"));
+        console.log(Object.entries(userDetailsObject));
+        const data = Object.entries(userDetailsObject)
+          .map((details) => `<p>The ${details[0]} is: ${details[1]}</p>`)
+          .join(" ");
+        console.log(data);
+        output.innerHTML = data;
+      });
+    </script>
+  </body>
+</html>
