@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="LocalStorage - Demo" />
+    <title>LocalStorage - Demo</title>
+    <style>
+      .login {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>LocalStorage - Demo</h2>
+    <div class="register">
+      <form action="#">
+        <h1>Register</h1>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" />
+        </div>
+        <div>
+          <input type="button" value="Register" onclick="store()" />
+        </div>
+      </form>
+    </div>
+    <hr />
+    <div class="login">
+      <form action="#">
+        <h1>Sign-In</h1>
+        <div>
+          <label for="login-email">Email:</label>
+          <input type="email" name="login-email" id="login-email" />
+        </div>
+        <div>
+          <label for="login-password">Password:</label>
+          <input type="password" name="login-password" id="login-password" />
+        </div>
+        <div>
+          <input type="button" value="Sign-in" onclick="check()" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function store() {
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+        // console.log(email, password);
+        localStorage.setItem(email, password);
+        alert("User details stored successfully....");
+        document.querySelector("#login").classList.add(login);
+      }
+
+      function check() {
+        // console.log("I am from check function");
+        const email = document.querySelector("#login-email").value;
+        const password = document.querySelector("#login-password").value;
+        const localstorageEmail = localStorage.getItem(email);
+        if (!localstorageEmail) {
+          alert("No user with the given name");
+        } else {
+          const localstoragePwd = localStorage.getItem(email);
+          if (password === localstoragePwd) {
+            alert("Access Granted...");
+          } else {
+            alert("Not Authorized or check password...");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
