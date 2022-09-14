@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Client Storage - sessionStorage - Demo" />
+    <title>Client Storage - sessionStorage - Demo</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 16px;
+        background-color: #fff;
+        color: #333;
+        line-height: 1.7;
+        transition: 0.2s ease-in-out;
+        padding: 20px;
+      }
+
+      .dark {
+        background-color: black;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>JavaScript sessionStorage Demo</h1>
+      <p>Click the button to switch to dark/light mode.</p>
+      <p>Refresh the page to check if the mode is saved.</p>
+      <a id="theme-switcher" class="btn"></a>
+    </div>
+
+    <script>
+      // sessionStorage
+      const DARK = "MOON";
+      const LIGHT = "SUN";
+
+      const DARK_MODE = "dark";
+      const LIGHT_MODE = "light";
+      const DEFAULT_MODE = DARK_MODE;
+
+      // Selecting btn
+      const btn = document.querySelector("#theme-switcher");
+
+      init();
+      function init() {
+        let storedMode = sessionStorage.getItem("mode");
+        if (!storedMode) {
+          storedMode = DEFAULT_MODE; // dark
+          sessionStorage.setItem("mode", DEFAULT_MODE);
+        }
+        setMode(storedMode);
+      }
+
+      function setMode(mode = DEFAULT_MODE) {
+        if (mode === DARK_MODE) {
+          btn.textContent = LIGHT;
+          document.body.classList.add(DARK_MODE); // dark
+        } else if (mode === LIGHT_MODE) {
+          btn.textContent = DARK;
+          document.body.classList.remove(DARK_MODE);
+        }
+      }
+
+      btn.addEventListener("click", () => {
+        let mode = sessionStorage.getItem("mode");
+        if (mode) {
+          let newMode = mode === DARK_MODE ? LIGHT_MODE : DARK_MODE;
+          setMode(newMode);
+          sessionStorage.setItem("mode", newMode);
+        }
+      });
+    </script>
+  </body>
+</html>

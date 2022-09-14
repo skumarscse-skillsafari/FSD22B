@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="SessionStorage" />
+    <title>SessionStorage</title>
+  </head>
+  <body>
+    <h2>SessionStorage</h2>
+    <!-- 
+        As like localStorage => for each and every URL we can store some data as key:value pair
+        Data stored in sessionStorage can be cleared automatically whenever the user closes the browser
+        Can be work with session Storage only by means of server. It won't works locally
+
+        Storage object with the methods: setItem(), getItem(), removeItem(), clear(), key(index)
+     -->
+
+    <script>
+      // Session Storage
+      // Access the sessionStorage
+      // window.sessionStorage
+      // sessionStorage => Storage object
+      //   console.log(window.sessionStorage);
+      //   console.log(sessionStorage);
+
+      // Create/Store Item in sessionStorage
+      // sessionStorage.setItem("user", "John");
+
+      // Get the specific item from sessionStorage
+      //   console.log(sessionStorage.getItem("user"));
+
+      //   // Get all the items
+      //   for (const key of Object.keys(sessionStorage)) {
+      //     console.log(sessionStorage.getItem(key));
+      //   }
+
+      // remove specific item
+      // sessionStorage.removeItem(key)
+
+      // remove all the items
+      // sessionStorage.clear()
+    </script>
+  </body>
+</html>
