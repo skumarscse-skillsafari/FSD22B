@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Callback" />
+    <title>JavaScript - Callback</title>
+  </head>
+  <body>
+    <h2>JavaScript - Callback</h2>
+
+    <script>
+      // JavaScript - Callback
+      /*
+        Callback => It is a function passed into another function as an argument
+    */
+      // Task - 1
+      //   let displayMessage = (message) => {
+      //     console.log(message);
+      //   };
+
+      //   // Task - 2
+      //   let displayName = (name) => {
+      //     console.log(name);
+      //   };
+      //   displayMessage("Hello, I am from displayMessage function...");
+      //   displayName("My name is John...");
+
+      //   let showName = (name) => {
+      //     console.log(`The name is: ${name}`);
+      //   };
+
+      //   let showAge = (age) => {
+      //     console.log(`The age is: ${age}`);
+      //   };
+
+      //   showName(showAge(30), "John");
+
+      //   let greeting = (name) => {
+      //     alert(`Hello, ${name}`);
+      //   };
+
+      //   let enterName = (callback) => {
+      //     let name = prompt("Enter the name");
+      //     callback(name);
+      //   };
+
+      //   enterName(greeting);
+
+      // setTimeout()
+      //   setTimeout(() => {
+      //     // statements
+      //   }, delayTime) => delayTime => milliseconds. Ex: 2000 => 2 seconds
+
+      let displayAge = () => {
+        console.log(25);
+      };
+
+      // Callback hell
+      setTimeout(() => {
+        console.log(50);
+        setTimeout(() => {
+          console.log("John");
+          setTimeout(() => {
+            console.log("Tester");
+          }, 3000);
+        }, 2000);
+      }, 1000);
+    </script>
+  </body>
+</html>

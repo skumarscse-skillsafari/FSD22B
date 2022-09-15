@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Promises" />
+    <title>JavaScript - Promises</title>
+  </head>
+  <body>
+    <h2>JavaScript - Promises</h2>
+
+    <script>
+      // JavaScript - Promises
+      /*
+      We can break the complex/huge projects into simple multiple tasks
+      1. Pending => Intitial stage
+      2. Resolve => Success/fulfiled stage
+      3. Reject => Error/rejected stage
+
+      let promise = new Promise((resolve, reject) => {
+        if(true) {
+            resolve()
+        } else {
+            reject()
+        }
+      })
+
+      promise.then(result => display)
+      
+      */
+
+      let greeting = (name) => {
+        alert(`Hello, ${name}`);
+      };
+
+      let enterName = () => {
+        return new Promise((resolve, reject) => {
+          let name = prompt("Enter your name:");
+          if (name) {
+            resolve(name);
+          }
+          reject("Something went wrong...");
+        });
+      };
+
+      enterName()
+        .then((result) => greeting(result))
+        .catch((result) => alert(result));
+
+      //   let promise = new Promise((resolve, reject) => {
+      //     // resolve("Hello");
+      //     reject("Task failed...");
+      //   });
+
+      //   console.log(promise);
+      //   // promise.then((result) => console.log(result));
+      //   promise.catch((result) => console.log(result));
+    </script>
+  </body>
+</html>
