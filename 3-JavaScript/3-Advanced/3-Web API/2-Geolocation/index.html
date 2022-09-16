@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Geolocation API" />
+    <title>Geolocation API</title>
+  </head>
+  <body>
+    <h2>Geolocation API</h2>
+    <div class="container">
+      <button id="btn">show my location</button>
+      <div id="message"></div>
+    </div>
+
+    <script>
+      // Geolocation API
+      // geolocation object
+      // navigator.geolocation => return object
+      function getLocation() {
+        const message = document.querySelector("#message");
+
+        // console.log(navigator.geolocation);
+        if (!navigator.geolocation) {
+          message.textContent = `Your browser does not support geolocation API`;
+          return;
+        }
+
+        // handle click event
+        const btn = document.querySelector("#btn");
+        btn.addEventListener("click", () => {
+          navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        });
+      }
+
+      // handle Success
+      function onSuccess(position) {
+        console.log(position); // GeolocationPosition
+        const { latitude, longitude } = position.coords;
+        message.textContent = `Your location is: (${latitude}, ${longitude})`;
+      }
+
+      function onError() {
+        message.textContent = `Failed to load the location`;
+      }
+      getLocation();
+    </script>
+  </body>
+</html>

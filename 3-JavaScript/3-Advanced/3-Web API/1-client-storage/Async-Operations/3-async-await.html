@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Async/Await" />
+    <title>Async/Await</title>
+  </head>
+  <body>
+    <h2>Async/Await</h2>
+
+    <script>
+      // Async/Await
+
+      //   function displayName(displayAge) {
+      //     console.log("John");
+      //     displayAge();
+      //   }
+
+      //   function displayAge() {
+      //     console.log(25);
+      //   }
+      //   displayName(displayAge);
+
+      /*
+       async function functionName() {
+        let result = await functionName-2()
+       }
+
+       function functionName-2() {
+        // logic
+       }
+      */
+
+      let greeting = (name) => alert(`Hello, ${name}`);
+
+      let enterName = () => {
+        return new Promise((resolve, reject) => {
+          let name = prompt("Enter your name");
+          if (name) {
+            resolve(name);
+          }
+          reject("Something went wrong...");
+        });
+      };
+
+      async function asyncCall() {
+        try {
+          let result = await enterName();
+          greeting(result);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      asyncCall();
+    </script>
+  </body>
+</html>
