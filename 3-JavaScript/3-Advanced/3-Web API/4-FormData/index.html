@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="FormData API" />
+    <title>FormData API</title>
+  </head>
+  <body>
+    <h2>FormData API</h2>
+    <form action="#" method="post" id="form">
+      <div>
+        <label for="username">Name:</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <button type="submit" id="btn">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      // FormData API
+      // Create FormData object
+      // interface FormData
+      // const formData = new FormData(form)
+      // Supported methods: append(), entries(), delete(), forEach(), get(), getAll(), has(), keys(), set(), values()
+      const form = document.querySelector("#form");
+      const btn = document.querySelector("#btn");
+      console.log(form);
+
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        console.log(formData);
+        // append('key', 'value') => add new properties to FormData object
+        // formData.append("age", 30);
+        // delete('key') => deletes the value by key
+        // formData.delete("password");
+        // set('key', 'value') => set new value to the existing data
+        // formData.set("username", "SkillSafari");
+        // has('key') => check the existance of a key
+        // console.log(formData.get("email"));
+        // console.log(formData.getAll('subjects'));
+        // keys() => return iterable keys of formData
+        // for (const key of formData.keys()) {
+        //   console.log(key);
+        // }
+        // values()
+        // for (const value of formData.values()) {
+        //   console.log(value);
+        // }
+        // entries()
+        for (const [key, value] of formData.entries()) {
+          console.log(`Key => ${key} : Value => ${value}`);
+        }
+        const values = [...formData.entries()];
+        console.log(values);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="FormData API POST method" />
+    <title>FormData API POST method</title>
+  </head>
+  <body>
+    <h2>FormData API POST method</h2>
+    <form action="#" method="post" id="form">
+      <h1>Subscribe</h1>
+      <div id="message"></div>
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" />
+      </div>
+      <div>
+        <button id="btn">Subscribe</button>
+      </div>
+    </form>
+
+    <script>
+      // FormData API POST method
+      const subscription = document.querySelector("#form");
+      const message = document.querySelector("#message");
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        subscribe();
+      });
+
+      const subscribe = async () => {
+        try {
+          let response = await fetch(
+            "https://jsonplaceholder.typicode.com/users",
+            {
+              method: "POST",
+              body: new FormData(subscription),
+            }
+          );
+          const result = await response.json();
+          console.log(result);
+          message.textContent = JSON.stringify(result);
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    </script>
+  </body>
+</html>
