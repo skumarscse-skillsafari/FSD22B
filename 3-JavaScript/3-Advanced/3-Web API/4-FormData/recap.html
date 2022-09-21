@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="FormData" />
+    <title>FormData - REcap</title>
+  </head>
+  <body>
+    <h2>FormData - Recap</h2>
+    <form action="#" method="post" id="form">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" />
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" />
+      </div>
+      <div>
+        <button id="btn">Submit</button>
+      </div>
+    </form>
+
+    <script>
+      // FormData
+      // FormData interface
+      // const formData = new FormData(form)
+      // object = { propertyName: propertyValue }
+      // formData = { username: "John", password : 123456 }
+      const form = document.querySelector("#form");
+      console.log(form);
+      const btn = document.querySelector("#btn");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const data = new FormData(form); // const data = { username: value, password: value }
+        // data.append('key', 'value') // Add new properties (key: value) to the data object
+        // data.append("age", 25);
+        // data.append("city", "chennai");
+        // console.log(...data);
+        // data.set("existingKey", "newValue") // Update the existing propertyValue of the data object
+        // data.set("username", "SkillSafari");
+        // data.delete("existingKey")
+        // data.delete("password"); // delete the existingProperty in the data object
+        // data.has("existingKey"); // boolean value; true => if property exists else return false
+        // console.log(data.has("username"));
+        // console.log(data.has("age"));
+        // data.get("existingKey"); // get the value of the existingProperty in the data object
+        // data.keys()
+
+        // data.values()
+
+        // data.entries()
+        console.log(data.get("password"));
+        console.log(...data);
+      });
+    </script>
+  </body>
+</html>

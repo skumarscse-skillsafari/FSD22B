@@ -46,6 +46,7 @@
           );
           const result = await response.json();
           console.log(result);
+          // if (result) message.textContent = "You are subscribed";
           message.textContent = JSON.stringify(result);
         } catch (error) {
           console.log(error);

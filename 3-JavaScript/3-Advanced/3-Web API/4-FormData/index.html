@@ -31,7 +31,9 @@
       // FormData API
       // Create FormData object
       // interface FormData
-      // const formData = new FormData(form)
+      // const form = document.querySelector("#form");
+      // const formData = new FormData(form);
+      // console.log(formData);
       // Supported methods: append(), entries(), delete(), forEach(), get(), getAll(), has(), keys(), set(), values()
       const form = document.querySelector("#form");
       const btn = document.querySelector("#btn");
@@ -40,9 +42,10 @@
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         const formData = new FormData(form);
-        console.log(formData);
+        // console.log([...formData]);
         // append('key', 'value') => add new properties to FormData object
         // formData.append("age", 30);
+        // console.log([...formData]);
         // delete('key') => deletes the value by key
         // formData.delete("password");
         // set('key', 'value') => set new value to the existing data
@@ -59,11 +62,11 @@
         //   console.log(value);
         // }
         // entries()
-        for (const [key, value] of formData.entries()) {
-          console.log(`Key => ${key} : Value => ${value}`);
-        }
-        const values = [...formData.entries()];
-        console.log(values);
+        // for (const [key, value] of formData.entries()) {
+        //   console.log(`Key => ${key} : Value => ${value}`);
+        // }
+        // const values = [...formData.entries()];
+        // console.log(values);
       });
     </script>
   </body>
