@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="IndexedDB" />
+    <title>IndexedDB</title>
+  </head>
+  <body>
+    <h2>IndexedDB</h2>
+
+    <script>
+      // IndexedDB
+      // Key: Value pair => Object
+      // large-scale object store
+      // Value => string, number boolean, object, array null, undefined
+
+      // Why
+      // Online and offine
+      // Ex: Google sheets, codepen
+
+      // Database => object store (Table) => index (Primary key) => identify the unique record in the object store
+      // NoSQL => No SQL / Structured Query Language
+      // No queries are needed to perform CRUD - Create, Read, Update, Delete => in-built methods
+
+      // Each domain/url => one indexed db
+
+      // Steps
+      // 1. Open a connection to the database
+      // 2. Insert an object into the object store
+      // 3. Read data from the object store
+      // 4. Use cursor iterate the result/data in object store
+      // 5. Delete an object from the object store
+
+      (function () {
+        // Compatibility
+        if (!window.indexedDB) {
+          alert("Your browser not supporting indexedDB");
+          return;
+        }
+
+        // Open a database
+        const request = indexedDB.open("Users", 1); // open() => IDBOpenDBRequest
+        console.log(request);
+
+        // onupgradeneded => one-time activity by which we can create object store
+        request.onupgradeneeded = (e) => {
+          let db = e.target.result;
+
+          // Create the Users object store
+          let store = db.createObjectStore("userDetails", {
+            autoIncrement: true,
+          });
+
+          // Create a index - email - Unique value
+          let index = store.createIndex("email", "email", {
+            unique: true,
+          });
+        };
+
+        request.onerror = (e) => {
+          console.log(`Database error: ${e.target.error}`);
+        };
+
+        request.onsuccess = (e) => {
+          // CRUD
+          const db = e.target.result;
+          // Insert User in the IndexedDB
+          function insertUser(db, userObj) {
+            // create a new transaction
+            const txn = db.transaction("userDetails", "readwrite");
+            // get the object store - userDetails
+            const store = txn.objectStore("userDetails");
+            // execute a query => return onsuccess, onerror
+            let query = store.put(userObj);
+
+            // onsuccess
+            query.onsuccess = function (e) {
+              console.log(e.target.result);
+            };
+            // onerror
+            query.onerror = function (e) {
+              console.log(e.target.error);
+            };
+
+            // close the database and stop the transaction
+            txn.oncomplete = function () {
+              db.close();
+            };
+          }
+
+          //   insertUser(db, {
+          //     email: "john@skillsafari.in",
+          //     name: "John",
+          //     age: 25,
+          //   });
+
+          //   insertUser(db, {
+          //     email: "jack@skillsafari.in",
+          //     name: "Jack",
+          //     age: 30,
+          //   });
+
+          //   insertUser(db, {
+          //     email: "mary@skillsafari.in",
+          //     name: "Mary",
+          //     age: 30,
+          //   });
+
+          // Read a data
+          function getUserById(db, id) {
+            const txn = db.transaction("userDetails", "readwrite");
+            const store = txn.objectStore("userDetails");
+            const query = store.get(id);
+
+            query.onsuccess = function (e) {
+              if (!e.target.result) {
+                console.log(`The user with the ID: ${id} not found`);
+              } else {
+                console.table(e.target.result);
+              }
+            };
+
+            query.onerror = function (e) {
+              console.log(e.target.error);
+            };
+
+            txn.oncomplete = function () {
+              db.close();
+            };
+          }
+
+          // getUserById(db, 1);
+          getUserById(db, 3);
+        };
+      })();
+    </script>
+  </body>
+</html>
