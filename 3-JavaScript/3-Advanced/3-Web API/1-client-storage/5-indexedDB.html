@@ -33,6 +33,10 @@
       // 4. Use cursor iterate the result/data in object store
       // 5. Delete an object from the object store
 
+      // Accessing indexedDB
+      // 1. window.indexedDB => return IDBFactory => {}
+      // 2. indexedDB
+
       (function () {
         // Compatibility
         if (!window.indexedDB) {
@@ -41,7 +45,8 @@
         }
 
         // Open a database
-        const request = indexedDB.open("Users", 1); // open() => IDBOpenDBRequest
+        // open("databaseName", "version")  // open() => IDBOpenDBRequest
+        const request = indexedDB.open("Users", 1);
         console.log(request);
 
         // onupgradeneded => one-time activity by which we can create object store
@@ -69,6 +74,7 @@
           // Insert User in the IndexedDB
           function insertUser(db, userObj) {
             // create a new transaction
+            // db.transaction("objectStore", "accessModePermission")
             const txn = db.transaction("userDetails", "readwrite");
             // get the object store - userDetails
             const store = txn.objectStore("userDetails");
@@ -132,7 +138,60 @@
           }
 
           // getUserById(db, 1);
-          getUserById(db, 3);
+          // getUserById(db, 3);
+
+          function getUserByEmail(db, email) {
+            const txn = db.transaction("userDetails", "readwrite");
+            const store = txn.objectStore("userDetails");
+            const index = store.index("email");
+            let query = index.get(email);
+            query.onsuccess = function (e) {
+              console.table(query.result);
+            };
+            query.onerror = function (e) {
+              console.log(e.target.error);
+            };
+            txn.oncomplete = function () {
+              db.close();
+            };
+          }
+
+          // getUserByEmail(db, "john@skillsafari.in");
+          // getUserByEmail(db, "mary@skillsafari.in");
+
+          function getAllUsers(db) {
+            const txn = db.transaction("userDetails", "readwrite");
+            const store = txn.objectStore("userDetails");
+            store.openCursor().onsuccess = function (e) {
+              const cursor = e.target.result;
+              if (cursor) {
+                let user = cursor.value;
+                console.log(user);
+                // continue next record
+                cursor.continue();
+              }
+            };
+            txn.oncomplete = function () {
+              db.close();
+            };
+          }
+          // getAllUsers(db);
+
+          function deleteUser(db, id) {
+            const txn = db.transaction("userDetails", "readwrite");
+            const store = txn.objectStore("userDetails");
+            let query = store.delete(id);
+            query.onsuccess = function (e) {
+              console.log(e.target.result);
+            };
+            query.onerror = function (e) {
+              console.log(e.target.error);
+            };
+            txn.oncomplete = function () {
+              db.close();
+            };
+          }
+          // deleteUser(db, 3);
         };
       })();
     </script>
