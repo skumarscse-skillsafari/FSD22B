@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopZone - Your Premier E-commerce Destination</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fas fa-shopping-bag me-2"></i>ShopZone</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-category="electronics">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="clothing">Clothing</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="books">Books</a></li>
+                            <li><a class="dropdown-item" href="#" data-category="home">Home & Garden</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <form class="d-flex me-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." id="searchInput">
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                
+                <!-- Cart -->
+                <button class="btn btn-outline-light position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold text-primary mb-4">Welcome to ShopZone</h1>
+                        <p class="lead mb-4">Discover amazing products at unbeatable prices. Shop from thousands of items across multiple categories.</p>
+                        <a href="#products" class="btn btn-primary btn-lg me-3">Shop Now</a>
+                        <a href="#about" class="btn btn-outline-primary btn-lg">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image text-center">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Shopping" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Categories</h2>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center" data-category="electronics">
+                        <div class="card-body">
+                            <i class="fas fa-laptop fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Electronics</h5>
+                            <p class="card-text">Latest gadgets and tech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center" data-category="clothing">
+                        <div class="card-body">
+                            <i class="fas fa-tshirt fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Clothing</h5>
+                            <p class="card-text">Fashion for everyone</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center" data-category="books">
+                        <div class="card-body">
+                            <i class="fas fa-book fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Books</h5>
+                            <p class="card-text">Knowledge and entertainment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="card category-card h-100 text-center" data-category="home">
+                        <div class="card-body">
+                            <i class="fas fa-home fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title">Home & Garden</h5>
+                            <p class="card-text">Make your house a home</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8">
+                    <h2>Our Products</h2>
+                </div>
+                <div class="col-lg-4">
+                    <div class="d-flex justify-content-end">
+                        <select class="form-select w-auto me-2" id="sortSelect">
+                            <option value="default">Sort by</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name">Name A-Z</option>
+                        </select>
+                        <select class="form-select w-auto" id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="clothing">Clothing</option>
+                            <option value="books">Books</option>
+                            <option value="home">Home & Garden</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" id="productsContainer">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="text-center mt-4">
+                <button class="btn btn-primary" id="loadMoreBtn">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="About Us" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">About ShopZone</h2>
+                    <p class="lead">We're passionate about bringing you the best products at the most competitive prices.</p>
+                    <p>Founded in 2020, ShopZone has grown to become one of the most trusted e-commerce platforms. We offer a wide range of products from electronics to fashion, books to home goods.</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success me-2"></i> Free shipping on orders over $50</li>
+                        <li><i class="fas fa-check text-success me-2"></i> 30-day return policy</li>
+                        <li><i class="fas fa-check text-success me-2"></i> 24/7 customer support</li>
+                        <li><i class="fas fa-check text-success me-2"></i> Secure payment processing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-center mb-4">Contact Us</h2>
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary mb-3"></i>
+                            <h5>Address</h5>
+                            <p>123 Shopping Street<br>Commerce City, CC 12345</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="fas fa-phone fa-2x text-primary mb-3"></i>
+                            <h5>Phone</h5>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <i class="fas fa-envelope fa-2x text-primary mb-3"></i>
+                            <h5>Email</h5>
+                            <p>info@shopzone.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-shopping-bag me-2"></i>ShopZone</h5>
+                    <p>Your premier e-commerce destination for quality products at great prices.</p>
+                </div>
+                <div class="col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#products" class="text-light text-decoration-none">Products</a></li>
+                        <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Follow Us</h6>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 ShopZone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <p class="text-center text-muted">Your cart is empty</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="w-100">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5>Total: $<span id="cartTotal">0.00</span></h5>
+                        </div>
+                        <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">Continue Shopping</button>
+                        <button type="button" class="btn btn-primary" id="checkoutBtn" disabled>Proceed to Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalTitle">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="productModalBody">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
