@@ -1,0 +1,21 @@
+{
+  "name": "modern-blog-website",
+  "version": "1.0.0",
+  "description": "A full-fledged modern blog website with React frontend and Express backend",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-deps": "npm install && cd server && npm install && cd ../client && npm install",
+    "start": "cd server && npm start"
+  },
+  "keywords": ["blog", "react", "express", "mongodb", "full-stack"],
+  "author": "Blog Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
